@@ -62,15 +62,6 @@ export default function Gallery() {
             </div>
           ))}
 
-          <div className="absolute bottom-20 left-6 z-20">
-            <span
-              className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-md mb-2 text-white"
-              style={{ background: "rgba(124,58,237,0.85)" }}
-            >
-              {slides[current].caption}
-            </span>
-          </div>
-
           <button
             onClick={prev}
             className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-xl bg-white/90 hover:bg-white text-[#1e1b2e] flex items-center justify-center transition-all border border-[#ddd6fe] hover:border-[#c4b5fd] shadow-sm"

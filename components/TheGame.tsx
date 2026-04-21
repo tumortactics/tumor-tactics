@@ -78,6 +78,17 @@ function RulebookStack() {
           style={{ background: "rgba(10,5,30,0.92)", backdropFilter: "blur(8px)" }}
           onClick={() => setLightboxPage(null)}
         >
+          {/* X button fixed to top-right of screen */}
+          <button
+            onClick={() => setLightboxPage(null)}
+            className="fixed top-5 right-5 w-10 h-10 rounded-full bg-white/15 hover:bg-white/30 text-white flex items-center justify-center transition-all border border-white/25 z-10"
+            aria-label="Close"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
           <div
             className="relative max-w-2xl w-full flex flex-col items-center gap-4"
             onClick={(e) => e.stopPropagation()}
@@ -113,16 +124,6 @@ function RulebookStack() {
                 </svg>
               </button>
             </div>
-
-            <button
-              onClick={() => setLightboxPage(null)}
-              className="absolute top-2 right-2 w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all"
-              aria-label="Close"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
           </div>
         </div>
       )}
@@ -135,26 +136,30 @@ function CardsGallery() {
 
   return (
     <>
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 p-2">
+      <div className="flex flex-wrap gap-4 p-2 justify-center">
         {cards.map((src, i) => (
           <button
             key={i}
             onClick={() => setLightboxCard(i)}
-            className="rounded-xl overflow-hidden border-2 border-[#c4b5fd] hover:border-[#7c3aed] transition-all duration-200 hover:shadow-xl hover:shadow-purple-200 hover:-translate-y-1 group aspect-[2/3] bg-[#ede9fe] shadow-sm"
+            className="rounded-xl border-2 border-[#c4b5fd] hover:border-[#7c3aed] transition-all duration-200 hover:shadow-xl hover:shadow-purple-200 hover:-translate-y-1 group bg-white shadow-sm p-1.5 flex-shrink-0"
+            style={{ width: 118, height: 162.92 }}
             aria-label={`View card ${i + 1}`}
           >
-            <img
-              src={src}
-              alt={`Card ${i + 1}`}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
+            <div className="rounded-lg overflow-hidden w-full h-full">
+              <img
+                src={src}
+                alt={`Card ${i + 1}`}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
           </button>
         ))}
       </div>
 
       <div className="flex justify-center mt-8">
         <a
-          href="#"
+          href="/assets/FINAL%20Double-Sided%20Print%20Version.pdf"
+          download
           className="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90 active:scale-95 shadow-md"
           style={{ background: "#7c3aed", boxShadow: "0 4px 16px rgba(124,58,237,0.35)" }}
         >
@@ -347,18 +352,22 @@ export default function TheGame() {
                 </p>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                {[
-                  { label: "2 Pages", sub: "Quick setup and clear rules" },
-                  { label: "Illustrated", sub: "Visual guides for every mechanic" },
-                  { label: "Classroom-Ready", sub: "Aligned to science standards" },
-                  { label: "Free PDF", sub: "Download and print instantly" },
-                ].map((item) => (
-                  <div key={item.label} className="rounded-xl border border-[#ddd6fe] p-4 bg-white">
-                    <div className="text-sm font-bold text-[#7c3aed] mb-0.5">{item.label}</div>
-                    <div className="text-xs text-[#6b5f8e]">{item.sub}</div>
-                  </div>
-                ))}
+              <div className="mt-8 space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: "2 Pages", sub: "Quick setup and clear rules" },
+                    { label: "Classroom-Ready", sub: "Aligned to science standards" },
+                  ].map((item) => (
+                    <div key={item.label} className="rounded-xl border border-[#ddd6fe] p-4 bg-white">
+                      <div className="text-sm font-bold text-[#7c3aed] mb-0.5">{item.label}</div>
+                      <div className="text-xs text-[#6b5f8e]">{item.sub}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-[#ddd6fe] p-4 bg-white">
+                  <div className="text-sm font-bold text-[#7c3aed] mb-0.5">Free PDF</div>
+                  <div className="text-xs text-[#6b5f8e]">Download and print instantly</div>
+                </div>
               </div>
             </div>
           </div>

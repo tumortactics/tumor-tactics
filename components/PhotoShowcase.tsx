@@ -8,7 +8,7 @@ export default function PhotoShowcase() {
               In the Classroom
             </p>
             <h2
-              className="text-4xl sm:text-5xl font-black text-[#1e1b2e] leading-none"
+              className="text-4xl sm:text-5xl font-bold text-[#1e1b2e] leading-none"
               style={{ letterSpacing: "-0.03em" }}
             >
               Bringing Science to Life
@@ -23,18 +23,6 @@ export default function PhotoShowcase() {
               alt="Tumor Tactics in the classroom"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(30,10,60,0.75) 0%, transparent 50%)" }} />
-            <div className="absolute bottom-6 left-6 right-6">
-              <span
-                className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-md mb-3 text-white"
-                style={{ background: "rgba(124,58,237,0.85)" }}
-              >
-                Classroom Session
-              </span>
-              <p className="text-white text-sm font-semibold leading-snug">
-                Students engaged in hands-on cancer biology learning
-              </p>
-            </div>
           </div>
 
           <div className="rounded-2xl overflow-hidden border border-[#ddd6fe] relative group cursor-default shadow-sm">
@@ -43,15 +31,6 @@ export default function PhotoShowcase() {
               alt="Students playing Tumor Tactics"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(30,10,60,0.6) 0%, transparent 60%)" }} />
-            <div className="absolute bottom-4 left-4">
-              <span
-                className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-md text-white"
-                style={{ background: "rgba(168,85,247,0.85)" }}
-              >
-                Gameplay
-              </span>
-            </div>
           </div>
 
           <div className="rounded-2xl overflow-hidden border border-[#ddd6fe] relative group cursor-default shadow-sm">
@@ -60,15 +39,6 @@ export default function PhotoShowcase() {
               alt="Tumor Tactics game components"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(30,10,60,0.6) 0%, transparent 60%)" }} />
-            <div className="absolute bottom-4 left-4">
-              <span
-                className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-md text-white"
-                style={{ background: "rgba(255,255,255,0.2)", backdropFilter: "blur(4px)" }}
-              >
-                Game Components
-              </span>
-            </div>
           </div>
         </div>
       </div>
