@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Story from "@/components/Story";
-import AboutGame from "@/components/AboutGame";
+import Marquee from "@/components/Marquee";
 import Impact from "@/components/Impact";
-import Gallery from "@/components/Gallery";
+import AboutGame from "@/components/AboutGame";
+import Story from "@/components/Story";
 import GetInvolved from "@/components/GetInvolved";
 import SupportMission from "@/components/SupportMission";
 import Contact from "@/components/Contact";
@@ -15,12 +15,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Marquee />
         <Story />
-        <AboutGame />
-        <Impact />
-        <Gallery />
-        <GetInvolved />
-        <SupportMission />
         <Contact />
       </main>
       <Footer />

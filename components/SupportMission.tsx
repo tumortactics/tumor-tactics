@@ -1,22 +1,26 @@
 export default function SupportMission() {
   return (
-    <section id="support" className="py-24 bg-slate-900">
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
-          Support Our Mission
-        </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-          Help Us Reach More Students
-        </h2>
-        <p className="text-slate-400 max-w-xl mx-auto leading-relaxed mb-12">
-          Your contribution directly funds game kit production, educator training, and outreach
-          programs that bring Tumor Tactics to underserved communities and schools with limited
-          resources. Every dollar makes a difference.
-        </p>
+    <section id="support" className="py-24 bg-[#f8f5ff] border-t border-[#ddd6fe]">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="text-center mb-14">
+          <p className="text-sm font-bold uppercase tracking-widest mb-4 text-[#7c3aed]">
+            Support Our Mission
+          </p>
+          <h2
+            className="text-4xl sm:text-5xl font-black text-[#1e1b2e] mb-4"
+            style={{ letterSpacing: "-0.03em" }}
+          >
+            Help Us Reach<br />More Students
+          </h2>
+          <p className="text-[#6b5f8e] max-w-xl mx-auto text-sm leading-relaxed">
+            Your contribution directly funds game kit production, educator training, and outreach
+            programs. Every dollar makes a difference.
+          </p>
+        </div>
 
-        <div className="bg-slate-800 rounded-2xl border border-slate-700 shadow-sm overflow-hidden">
-          <div className="p-10">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
+        <div className="rounded-2xl border border-[#ddd6fe] overflow-hidden bg-white shadow-sm shadow-purple-100">
+          <div className="p-8 sm:p-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
               {[
                 { label: "One-Time Gift", desc: "Make a single contribution to fund game kits and classroom materials." },
                 { label: "Monthly Support", desc: "Become a recurring donor and help sustain our programs long-term." },
@@ -25,28 +29,34 @@ export default function SupportMission() {
                 <a
                   key={opt.label}
                   href="#"
-                  className="group block bg-slate-900 hover:bg-slate-700 border border-slate-700 hover:border-blue-600 rounded-xl p-5 text-left transition-all duration-200"
+                  className="group block rounded-xl p-5 text-left transition-all duration-200 border border-[#ddd6fe] hover:border-[#7c3aed]/50 hover:shadow-sm bg-[#f8f5ff]"
                 >
-                  <p className="text-sm font-semibold text-slate-100 mb-2 group-hover:text-blue-400 transition-colors">
+                  <p className="text-sm font-bold text-[#1e1b2e] mb-2 group-hover:text-[#7c3aed] transition-colors">
                     {opt.label}
                   </p>
-                  <p className="text-xs text-slate-500 leading-relaxed">{opt.desc}</p>
+                  <p className="text-xs text-[#6b5f8e] leading-relaxed">{opt.desc}</p>
                 </a>
               ))}
             </div>
 
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-10 py-3.5 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 active:bg-blue-800 transition-colors shadow-sm"
-            >
-              Donate Now
-            </a>
-            <p className="text-xs text-slate-500 mt-4">
-              Secure donation options coming soon. Questions?{" "}
-              <a href="mailto:tumortactics@gmail.com" className="text-slate-400 hover:text-blue-400 transition-colors underline underline-offset-2">
-                Email us directly.
+            <div className="text-center">
+              <a
+                href="#"
+                className="inline-flex items-center justify-center px-10 py-4 font-black rounded-xl text-sm text-white transition-all hover:opacity-90 active:scale-95"
+                style={{ background: "#7c3aed", boxShadow: "0 4px 20px rgba(124,58,237,0.35)" }}
+              >
+                Donate Now
               </a>
-            </p>
+              <p className="text-xs text-[#a89bc9] mt-4">
+                Questions?{" "}
+                <a
+                  href="mailto:tumortactics@gmail.com"
+                  className="text-[#6b5f8e] hover:text-[#7c3aed] transition-colors underline underline-offset-2"
+                >
+                  Email us directly.
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,47 +1,47 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-slate-950">
-      <div className="max-w-2xl mx-auto px-6 text-center">
-        <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">
+    <section id="contact" className="py-24 bg-white border-t border-[#ddd6fe]">
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        <p className="text-sm font-bold uppercase tracking-widest mb-4 text-[#7c3aed]">
           Contact
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+        <h2
+          className="text-4xl sm:text-5xl font-black text-[#1e1b2e] mb-4"
+          style={{ letterSpacing: "-0.03em" }}
+        >
           Get in Touch
         </h2>
-        <p className="text-slate-400 mb-12 leading-relaxed">
-          Whether you are an educator, a potential partner, or simply passionate
-          about cancer education, we would love to hear from you.
+        <p className="text-[#6b5f8e] mb-14 text-sm leading-relaxed max-w-md mx-auto">
+          Whether you are an educator, a potential partner, or passionate about
+          cancer education, we would love to hear from you.
         </p>
 
-        <div className="bg-gradient-to-br from-slate-800 to-blue-950/40 rounded-2xl p-10 border border-slate-700 shadow-sm">
-          <div className="inline-flex p-3.5 rounded-2xl bg-slate-700 shadow-sm mb-6 border border-slate-600">
-            <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <p className="text-sm text-slate-400 mb-2 font-medium">
+        <div className="rounded-2xl border border-[#ddd6fe] p-10 bg-[#f8f5ff] shadow-sm shadow-purple-100">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#a89bc9] mb-3">
             Email us directly
           </p>
           <a
             href="mailto:tumortactics@gmail.com"
-            className="text-xl sm:text-2xl font-semibold text-slate-100 hover:text-blue-400 transition-colors break-all"
+            className="text-2xl sm:text-3xl font-black text-[#1e1b2e] hover:text-[#7c3aed] transition-colors break-all"
+            style={{ letterSpacing: "-0.02em" }}
           >
             tumortactics@gmail.com
           </a>
-          <p className="text-sm text-slate-500 mt-3">
+          <p className="text-xs text-[#a89bc9] mt-3">
             We typically respond within 2–3 business days.
           </p>
 
-          <div className="mt-8 pt-6 border-t border-slate-700/70 flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="mt-10 pt-8 border-t border-[#ddd6fe] flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="mailto:tumortactics@gmail.com?subject=Partnership%20Inquiry"
-              className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 font-bold text-sm rounded-xl text-white transition-all hover:opacity-90 active:scale-95"
+              style={{ background: "#7c3aed" }}
             >
               Partner With Us
             </a>
             <a
               href="mailto:tumortactics@gmail.com?subject=Game%20Kit%20Request"
-              className="inline-flex items-center justify-center px-6 py-3 border border-slate-600 text-slate-200 text-sm font-semibold rounded-full hover:bg-slate-700 hover:border-slate-500 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 border border-[#ddd6fe] text-[#1e1b2e] text-sm font-bold rounded-xl hover:bg-[#ede9fe] hover:border-[#c4b5fd] active:scale-95 transition-all"
             >
               Request a Game Kit
             </a>
