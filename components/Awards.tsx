@@ -1,10 +1,10 @@
 const awards = [
-  { name: "Award / Organization Name", href: "#", year: "2024" },
-  { name: "Award / Organization Name", href: "#", year: "2024" },
-  { name: "Award / Organization Name", href: "#", year: "2023" },
-  { name: "Award / Organization Name", href: "#", year: "2023" },
-  { name: "Award / Organization Name", href: "#", year: "2023" },
-  { name: "Award / Organization Name", href: "#", year: "2022" },
+  { src: "/assets/awards/carson'sscholarfund.png", alt: "Carson's Scholar Fund", href: "https://carsonscholars.org/" },
+  { src: "/assets/awards/ideation.png", alt: "Ideaction Pitch Competition", href: "https://leadershipinnovationlab.org/ideaction-competition" },
+  { src: "/assets/awards/rensselaer.png", alt: "Rensselaer", href: "https://financialaid.rpi.edu/types-aid/scholarships/rensselaer-medal" },
+  { src: "/assets/awards/thecontributionproject.png", alt: "The Contribution Project", href: "https://contributionproject.org/" },
+  { src: "/assets/awards/youthcentral.png", alt: "Youth Central", href: "https://www.youthcentral.com/" },
+  { src: "/assets/awards/youthleadershipsummit.png", alt: "Youth Leadership Summit", href: "https://youthsummitusa.com/" },
 ];
 
 export default function Awards() {
@@ -23,29 +23,22 @@ export default function Awards() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {awards.map((award, i) => (
+        <div className="flex flex-wrap justify-center items-center gap-8">
+          {awards.map((award) => (
             <a
-              key={i}
+              key={award.alt}
               href={award.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-3 rounded-2xl border border-[#ddd6fe] p-5 hover:border-[#c4b5fd] hover:shadow-md hover:shadow-purple-100 transition-all duration-200 bg-[#f8f5ff]"
+              className="group flex items-center justify-center rounded-xl p-4 transition-all duration-300 hover:scale-110"
+              style={{ height: 80 }}
+              aria-label={award.alt}
             >
-              {/* Logo placeholder */}
-              <div
-                className="w-full aspect-[3/2] rounded-xl flex items-center justify-center border border-[#ddd6fe] bg-white group-hover:border-[#c4b5fd] transition-colors"
-              >
-                <span className="text-xs text-[#c4b5fd] font-medium text-center px-2 leading-snug">
-                  Logo Here
-                </span>
-              </div>
-              <div className="text-center">
-                <p className="text-xs font-semibold text-[#1e1b2e] leading-snug group-hover:text-[#7c3aed] transition-colors">
-                  {award.name}
-                </p>
-                <p className="text-xs text-[#a89bc9] mt-0.5">{award.year}</p>
-              </div>
+              <img
+                src={award.src}
+                alt={award.alt}
+                className="h-full w-auto object-contain max-w-[160px]"
+              />
             </a>
           ))}
         </div>

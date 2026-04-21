@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Tumor Tactics — Transforming Cancer Education Through Play",
@@ -20,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} h-full`}>
+    <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col antialiased">{children}</body>
     </html>
   );

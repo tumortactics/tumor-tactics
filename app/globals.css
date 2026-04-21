@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url(https://db.onlinewebfonts.com/c/cc1fd3ac8497388cfc4da587e06951b0?family=SQ+Market+Regular+Regular);
 
 :root {
   --background: #f8f5ff;
@@ -13,7 +14,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-space-grotesk);
+  --font-sans: "SQ Market Regular Regular", system-ui, -apple-system, sans-serif;
   --color-purple: #7c3aed;
   --color-purple-dark: #5b21b6;
   --color-purple-light: #ede9fe;
@@ -26,7 +27,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
+  font-family: "SQ Market Regular Regular", system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

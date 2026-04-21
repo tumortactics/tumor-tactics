@@ -22,7 +22,8 @@ const options = [
     description:
       "Your contribution directly funds game kit production, educator training, and outreach programs that bring Tumor Tactics to underserved communities.",
     cta: "Support Our Mission",
-    href: "/#support",
+    target: "_blank",
+    href: "https://www.zeffy.com/en-US/donation-form/support-tumor-tactics-in-every-classroom",
     accent: "#a855f7",
     accentText: "#fff",
   },
@@ -63,6 +64,7 @@ export default function GetInvolved() {
               <p className="text-sm text-[#6b5f8e] leading-relaxed flex-1 mb-7">{opt.description}</p>
               <a
                 href={opt.href}
+                target={opt.target || "_self"}
                 className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-lg transition-all hover:opacity-90 active:scale-95"
                 style={{ background: opt.accent, color: opt.accentText }}
               >

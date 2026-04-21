@@ -142,7 +142,7 @@ function CardsGallery() {
             key={i}
             onClick={() => setLightboxCard(i)}
             className="rounded-xl border-2 border-[#c4b5fd] hover:border-[#7c3aed] transition-all duration-200 hover:shadow-xl hover:shadow-purple-200 hover:-translate-y-1 group bg-white shadow-sm p-1.5 flex-shrink-0"
-            style={{ width: 118, height: 162.92 }}
+            style={{ width: 132, height: 182.5 }}
             aria-label={`View card ${i + 1}`}
           >
             <div className="rounded-lg overflow-hidden w-full h-full">
