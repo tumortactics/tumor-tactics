@@ -12,48 +12,54 @@ const rulebook = [
 
 function RulebookStack() {
   const [lightboxPage, setLightboxPage] = useState<number | null>(null);
+  const [cardHovered, setCardHovered] = useState(false);
+  const [backHovered, setBackHovered] = useState(false);
 
   return (
     <>
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col items-center gap-6 w-full" style={{ maxWidth: 364 }}>
         {/* Stacked cards */}
-        <div className="relative w-full" style={{ maxWidth: 364, aspectRatio: "364 / 504" }}>
-          {/* Back card (page 2) */}
+        <div className="relative w-full" style={{ minHeight: 504 }}>
+          {/* Back card (page 2) — absolute, peeking behind */}
           <button
             onClick={() => setLightboxPage(1)}
-            className="absolute inset-0 rounded-xl overflow-hidden border-2 border-[#ddd6fe] shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer"
+            className="absolute inset-x-0 top-0 rounded-xl overflow-hidden border-2 border-[#ddd6fe] shadow-lg cursor-pointer"
             style={{
-              transform: "rotate(-4deg) translate(10px, 8px)",
+              transform: backHovered ? "rotate(0deg) translateY(-6px)" : "rotate(-4deg) translate(10px, 8px)",
               zIndex: 1,
+              maxHeight: backHovered ? 1200 : 504,
+              boxShadow: backHovered ? "0 24px 48px rgba(124,58,237,0.15)" : undefined,
+              transition: "max-height 0.45s cubic-bezier(0.4,0,0.2,1), transform 0.3s ease-out, box-shadow 0.3s ease-out",
             }}
             aria-label="Open rulebook page 2"
           >
             <img
               src={rulebook[1].src}
               alt="Rulebook page 2"
-              className="w-full h-full object-cover"
+              className="w-full h-auto"
             />
           </button>
 
-          {/* Front card (page 1) */}
+          {/* Front card (page 1) — in normal flow, expands on hover */}
           <button
             onClick={() => setLightboxPage(0)}
-            className="absolute inset-0 rounded-xl overflow-hidden border-2 border-[#c4b5fd] shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
+            onMouseEnter={() => setCardHovered(true)}
+            onMouseLeave={() => setCardHovered(false)}
+            className="relative w-full rounded-xl overflow-hidden border-2 border-[#c4b5fd] shadow-xl cursor-pointer"
             style={{
-              transform: "rotate(1.5deg)",
+              transform: cardHovered ? "rotate(0deg) translateY(-6px)" : "rotate(1.5deg)",
               zIndex: 2,
+              maxHeight: cardHovered ? 1200 : 504,
+              boxShadow: cardHovered ? "0 24px 48px rgba(124,58,237,0.2)" : undefined,
+              transition: "max-height 0.45s cubic-bezier(0.4,0,0.2,1), transform 0.3s ease-out, box-shadow 0.3s ease-out",
             }}
             aria-label="Open rulebook page 1"
           >
             <img
               src={rulebook[0].src}
               alt="Rulebook page 1"
-              className="w-full h-full object-cover"
+              className="w-full h-auto"
             />
-            <div className="absolute inset-0 flex items-end p-3 opacity-0 hover:opacity-100 transition-opacity"
-              style={{ background: "linear-gradient(to top, rgba(124,58,237,0.7) 0%, transparent 60%)" }}>
-              <span className="text-white text-xs font-bold uppercase tracking-widest">Click to view</span>
-            </div>
           </button>
         </div>
 

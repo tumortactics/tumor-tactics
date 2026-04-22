@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center hover:opacity-85 transition-opacity">
           <Image
-            src="/assets/top_left_logo.jpg"
+            src="/assets/top_left_logo-removebg-preview.png"
             alt="Tumor Tactics"
             width={140}
             height={40}

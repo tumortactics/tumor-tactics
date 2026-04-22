@@ -8,11 +8,11 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
         <div className="flex items-center gap-3">
           <Image
-            src="/assets/top_left_logo.jpg"
+            src="/assets/top_left_logo-removebg-preview.png"
             alt="Tumor Tactics"
             width={120}
             height={36}
-            className="h-8 w-auto brightness-0 invert opacity-80"
+            className="h-8 w-auto"
           />
         </div>
 
