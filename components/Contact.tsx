@@ -2,9 +2,6 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-white border-t border-[#ddd6fe]">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest mb-4 text-[#7c3aed]">
-          Contact
-        </p>
         <h2
           className="text-4xl sm:text-5xl font-black text-[#1e1b2e] mb-4"
           style={{ letterSpacing: "-0.03em" }}

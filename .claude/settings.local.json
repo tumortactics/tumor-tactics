@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm run *)",
-      "Bash(curl -s \"https://www.playmoneymind.com/\")"
+      "Bash(curl -s \"https://www.playmoneymind.com/\")",
+      "Bash(node .claude/skills/impeccable/scripts/cleanup-deprecated.mjs)"
     ]
   }
 }

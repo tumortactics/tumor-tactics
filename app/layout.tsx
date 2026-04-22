@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Home | Tumor Tactics",
   description:
     "A nonprofit educational initiative bringing cancer biology to life through strategic, engaging gameplay for middle and high school students.",
+  icons: {
+    icon: "/assets/logo.jpg",
+  },
 };
 
 export default function RootLayout({

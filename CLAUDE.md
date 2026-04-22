@@ -1,1 +1,31 @@
 @AGENTS.md
+
+## Design Context
+
+### Users
+Primary audience: **teachers and educators** evaluating whether to bring Tumor Tactics into their classroom or workshop. They're visiting during school hours or evenings, often on a laptop, making a trust-based decision about a student activity. Secondary audiences include donors assessing nonprofit credibility and students who discover the game and want to learn more. The site needs to earn educator confidence first — then delight students.
+
+### Brand Personality
+**Inspiring, hopeful, credible.** Three words: *curious, warm, purposeful.*
+
+The emotional goal is the feeling you get at a great science museum — wonder and learning made accessible, with warmth and real-world stakes. It's serious about cancer education but never cold or clinical. It's joyful about the game but never childish. It carries the quiet confidence of a mission that genuinely matters.
+
+### Aesthetic Direction
+**Light mode.** Educators browse in classrooms, offices, at home on a Sunday night — bright, readable, trustworthy.
+
+**Color anchor**: The purple palette already established (`#7c3aed`, `#f8f5ff` background) is a real asset — distinctive, warm, doesn't read as generic-nonprofit blue or sterile medical. Use OKLCH to deepen and tint the neutrals toward the purple hue for subconscious cohesion.
+
+**Anti-references to actively avoid:**
+- Generic nonprofit: stock photo heroes, stock-blue/green palettes, "we make a difference" boilerplate
+- Kids' educational app: cartoonish icons, bubbly rounded everything, primary color overload
+- Gamer/esports: dark mode, neon accents, aggressive typography
+- Sterile medical: white + clinical blue, hospital whitespace
+
+**Reference feel**: Somewhere between a well-designed science journal's website and an independent museum's exhibit page — serious about content, but warm and human. Photography-forward (real workshop photos, real cards, real students).
+
+### Design Principles
+1. **Earn educator trust first.** Credibility signals (awards, real photos, clear mission) should appear early and prominently.
+2. **Science wonder, not science fear.** Cancer biology should feel fascinating, not scary — the game reframes it as a puzzle to understand.
+3. **Purple with purpose.** The brand color is the dominant accent, not decoration. Use it sparingly; let the warm off-white carry most surfaces.
+4. **Real over polished.** Authentic workshop photography beats stock imagery. Show actual cards, actual students, actual events.
+5. **Typography carries voice.** Headings with character; body text that's easy to read at length. Feels like a knowledgeable human, not a press release.

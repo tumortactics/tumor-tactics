@@ -17,7 +17,7 @@ function RulebookStack() {
     <>
       <div className="flex flex-col items-center gap-6">
         {/* Stacked cards */}
-        <div className="relative" style={{ width: 260, height: 360 }}>
+        <div className="relative w-full" style={{ maxWidth: 364, aspectRatio: "364 / 504" }}>
           {/* Back card (page 2) */}
           <button
             onClick={() => setLightboxPage(1)}
@@ -230,29 +230,6 @@ function CardsGallery() {
   );
 }
 
-const features = [
-  {
-    icon: "🧬",
-    title: "Real Biology, Real Stakes",
-    desc: "Every card and mechanic is grounded in oncology research — tumor growth, immune evasion, metastasis, and treatment response.",
-  },
-  {
-    icon: "♟️",
-    title: "Strategic Decision-Making",
-    desc: "Allocate resources, adapt to evolving threats, and outmaneuver opponents in a game that rewards critical thinking.",
-  },
-  {
-    icon: "🏫",
-    title: "Built for the Classroom",
-    desc: "Educator guides, discussion prompts, and standards alignment for grades 6–12. Drop-in ready, no prior knowledge needed.",
-  },
-  {
-    icon: "🤝",
-    title: "Collaborative Play",
-    desc: "Can be played cooperatively or competitively. Teams work together to understand the complexity of cancer biology.",
-  },
-];
-
 export default function TheGame() {
   return (
     <div className="bg-[#f8f5ff]">
@@ -266,13 +243,7 @@ export default function TheGame() {
           }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <div
-            className="inline-flex items-center gap-2 text-white/80 text-xs font-bold px-4 py-1.5 rounded-full mb-8 uppercase tracking-widest"
-            style={{ background: "rgba(124,58,237,0.4)", border: "1px solid rgba(196,181,253,0.3)" }}
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c4b5fd] inline-block" />
-            Educational Card Game
-          </div>
+          <p className="text-white/50 text-xs font-bold uppercase tracking-widest mb-6">Educational Card Game</p>
           <h1
             className="text-5xl sm:text-6xl md:text-7xl font-black text-white mb-6 leading-none"
             style={{ letterSpacing: "-0.03em" }}
@@ -299,32 +270,29 @@ export default function TheGame() {
         </div>
       </section>
 
-      {/* Features */}
-     <section className="py-20 bg-white border-b border-[#ddd6fe]">
+      {/* Cards */}
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-sm font-bold uppercase tracking-widest mb-3 text-[#7c3aed]">How It Works</p>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b2e]" style={{ letterSpacing: "-0.03em" }}>
-              Science-Driven Gameplay
-            </h2>
+          <div className="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b2e]" style={{ letterSpacing: "-0.03em" }}>
+                The Card Deck
+              </h2>
+              <p className="text-[#6b5f8e] text-sm mt-2 max-w-sm">
+                Each card represents a biological mechanism, treatment option, or game event rooted in real oncology.
+              </p>
+            </div>
+            <p className="text-xs font-medium text-[#a89bc9] shrink-0">Click any card to enlarge</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {features.map((f) => (
-              <div key={f.title} className="rounded-2xl border border-[#ddd6fe] p-6 bg-[#f8f5ff] hover:border-[#c4b5fd] hover:shadow-md hover:shadow-purple-100 transition-all duration-200">
-                <div className="text-3xl mb-4">{f.icon}</div>
-                <h3 className="text-sm font-bold text-[#1e1b2e] mb-2">{f.title}</h3>
-                <p className="text-xs text-[#6b5f8e] leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </div>
+
+          <CardsGallery />
         </div>
-      </section>
+      </section>  
 
       {/* Rulebook */}
       <section className="py-20 bg-[#f8f5ff] border-b border-[#ddd6fe]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-sm font-bold uppercase tracking-widest mb-3 text-[#7c3aed]">Rulebook</p>
+          <div className="mb-14">
             <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b2e]" style={{ letterSpacing: "-0.03em" }}>
               Learn to Play
             </h2>
@@ -374,23 +342,6 @@ export default function TheGame() {
         </div>
       </section>
 
-      {/* Cards */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-sm font-bold uppercase tracking-widest mb-3 text-[#7c3aed]">Card Deck</p>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1e1b2e] mb-3" style={{ letterSpacing: "-0.03em" }}>
-              All Cards
-            </h2>
-            <p className="text-[#6b5f8e] text-sm max-w-md mx-auto">
-              Click any card to view it full size. Each card represents a biological mechanism,
-              treatment option, or game event rooted in real oncology.
-            </p>
-          </div>
-
-          <CardsGallery />
-        </div>
-      </section>
     </div>
   );
 }

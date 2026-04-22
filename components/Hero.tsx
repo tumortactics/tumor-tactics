@@ -15,13 +15,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center justify-center text-center" style={{ minHeight: "92vh" }}>
-        <div
-          className="inline-flex items-center gap-2 text-white text-xs font-bold px-4 py-1.5 rounded-md mb-8 uppercase tracking-widest"
-          style={{ background: "rgba(124,58,237,0.85)", border: "1px solid rgba(167,139,250,0.4)" }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#c4b5fd] inline-block" />
-          Nonprofit Educational Initiative
-        </div>
+        <p className="text-white/50 text-xs font-bold uppercase tracking-widest mb-6">Nonprofit Educational Initiative</p>
 
         <h1
           className="text-6xl sm:text-7xl md:text-8xl font-black text-white leading-none mb-6"

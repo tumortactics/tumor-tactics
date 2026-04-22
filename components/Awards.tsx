@@ -14,10 +14,7 @@ export default function Awards() {
   return (
     <section className="py-24 bg-white border-t border-[#ddd6fe]">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <p className="text-sm font-bold uppercase tracking-widest mb-4 text-[#7c3aed]">
-            Recognition
-          </p>
+        <div className="mb-14">
           <h2
             className="text-4xl sm:text-5xl font-bold text-[#1e1b2e] leading-none"
             style={{ letterSpacing: "-0.03em" }}

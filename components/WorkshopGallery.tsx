@@ -13,7 +13,6 @@ export default function WorkshopGallery() {
   return (
     <section className="py-20 bg-white border-t border-[#ddd6fe] overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 mb-10">
-        <p className="text-sm font-bold uppercase tracking-widest mb-3 text-[#7c3aed]">Workshops</p>
         <h2
           className="text-3xl sm:text-4xl font-bold text-[#1e1b2e]"
           style={{ letterSpacing: "-0.03em" }}
