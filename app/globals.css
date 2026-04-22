@@ -1,5 +1,13 @@
 @import "tailwindcss";
-
+@font-face {
+    font-family: "SQ Market Regular Regular";
+    src: url("https://db.onlinewebfonts.com/t/cc1fd3ac8497388cfc4da587e06951b0.eot");
+    src: url("https://db.onlinewebfonts.com/t/cc1fd3ac8497388cfc4da587e06951b0.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cc1fd3ac8497388cfc4da587e06951b0.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cc1fd3ac8497388cfc4da587e06951b0.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/cc1fd3ac8497388cfc4da587e06951b0.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cc1fd3ac8497388cfc4da587e06951b0.svg#SQ Market Regular Regular")format("svg");
+}
 :root {
   --background: #f8f5ff;
   --foreground: #1e1b2e;
