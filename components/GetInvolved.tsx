@@ -4,7 +4,7 @@ const options = [
     description:
       "Organizations and institutions can collaborate with Tumor Tactics to bring cancer education to more classrooms. We welcome partnerships with schools, hospitals, nonprofits, and research institutions.",
     cta: "Become a Partner",
-    href: "/#contact",
+    href: "mailto:tumortactics@gmail.com?subject=Partnership%20Inquiry",
     accent: "#7c3aed",
     accentText: "#fff",
   },
@@ -13,7 +13,7 @@ const options = [
     description:
       "Educators can request a Tumor Tactics classroom kit. We provide game materials, educator guides, and lesson plans aligned with science standards for grades 6–12.",
     cta: "Request a Kit",
-    href: "/#contact",
+    href: "mailto:tumortactics@gmail.com?subject=Game%20Kit%20Request",
     accent: "#1e1b2e",
     accentText: "#fff",
   },

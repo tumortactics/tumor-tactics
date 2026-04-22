@@ -7,6 +7,9 @@ const awards = [
   { src: "/assets/awards/youthleadershipsummit.png", alt: "Youth Leadership Summit", href: "https://youthsummitusa.com/" },
 ];
 
+// Duplicate for seamless looping
+const repeated = [...awards, ...awards];
+
 export default function Awards() {
   return (
     <section className="py-24 bg-white border-t border-[#ddd6fe]">
@@ -22,22 +25,24 @@ export default function Awards() {
             Awards &amp; Honors
           </h2>
         </div>
+      </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8">
-          {awards.map((award) => (
+      <div className="overflow-hidden">
+        <div className="flex animate-marquee" style={{ width: "max-content" }}>
+          {repeated.map((award, i) => (
             <a
-              key={award.alt}
+              key={i}
               href={award.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center rounded-xl p-4 transition-all duration-300 hover:scale-110"
-              style={{ height: 80 }}
+              className="flex items-center justify-center rounded-xl px-8 mx-4 transition-all duration-300 hover:scale-110 flex-shrink-0"
+              style={{ height: 140 }}
               aria-label={award.alt}
             >
               <img
                 src={award.src}
                 alt={award.alt}
-                className="h-full w-auto object-contain max-w-[160px]"
+                className="h-full w-auto object-contain max-w-[220px]"
               />
             </a>
           ))}

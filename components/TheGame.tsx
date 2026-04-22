@@ -300,7 +300,7 @@ export default function TheGame() {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-white border-b border-[#ddd6fe]">
+     <section className="py-20 bg-white border-b border-[#ddd6fe]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <p className="text-sm font-bold uppercase tracking-widest mb-3 text-[#7c3aed]">How It Works</p>
