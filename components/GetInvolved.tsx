@@ -31,7 +31,7 @@ const options = [
 
 export default function GetInvolved() {
   return (
-    <section id="get-involved" className="py-24 bg-white border-t border-[#ddd6fe]">
+    <section id="get-involved" className="pt-24 pb-12 bg-white border-t border-[#b4a4f0]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
           <p className="text-sm font-bold uppercase tracking-widest mb-4 text-[#7c3aed]">
@@ -44,7 +44,7 @@ export default function GetInvolved() {
             >
               Join the<br />Movement
             </h2>
-            <p className="text-[#6b5f8e] text-sm max-w-xs leading-relaxed">
+            <p className="text-[#3d2f6b] text-sm max-w-xs leading-relaxed">
               A few ways to support our mission to make cancer education accessible and impactful.
             </p>
           </div>
@@ -54,18 +54,18 @@ export default function GetInvolved() {
           {options.map((opt) => (
             <div
               key={opt.title}
-              className="rounded-2xl border border-[#ddd6fe] p-7 flex flex-col hover:border-[#c4b5fd] hover:shadow-md hover:shadow-purple-100 transition-all duration-200 group bg-[#f8f5ff]"
+              className="rounded-2xl border border-[#b4a4f0] p-7 flex flex-col hover:border-[#c4b5fd] hover:shadow-md hover:shadow-purple-100 transition-[border-color,box-shadow] duration-200 group bg-[#ede9fe]"
             >
               <div
-                className="w-8 h-1 rounded-full mb-6 transition-all duration-300 group-hover:w-12"
+                className="w-8 h-1 rounded-full mb-6 transition-[width] duration-300 group-hover:w-12"
                 style={{ background: opt.accent }}
               />
               <h3 className="text-base font-bold text-[#1e1b2e] mb-3">{opt.title}</h3>
-              <p className="text-sm text-[#6b5f8e] leading-relaxed flex-1 mb-7">{opt.description}</p>
+              <p className="text-sm text-[#3d2f6b] leading-relaxed flex-1 mb-7">{opt.description}</p>
               <a
                 href={opt.href}
                 target={opt.target || "_self"}
-                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-lg transition-all hover:opacity-90 active:scale-95"
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-lg transition-[opacity,transform] hover:opacity-90 active:translate-y-px"
                 style={{ background: opt.accent, color: opt.accentText }}
               >
                 {opt.cta}

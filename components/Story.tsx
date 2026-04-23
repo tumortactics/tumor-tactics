@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 export default function Story() {
   return (
-    <section id="story" className="py-24 bg-[#f8f5ff]">
+    <section id="story" className="py-24 bg-[#ede9fe]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -15,7 +17,7 @@ export default function Story() {
               <span className="text-[#7c3aed]">Curiosity and Purpose</span>
             </h2>
 
-            <div className="space-y-5 text-[#6b5f8e] leading-relaxed text-sm">
+            <div className="space-y-5 text-[#3d2f6b] leading-relaxed text-sm">
               <p>
                 Tumor Tactics began with a simple observation: cancer is one of
                 the most prevalent and complex diseases in the world, yet most
@@ -47,23 +49,26 @@ export default function Story() {
                 { stat: "Classroom-Ready", sub: "Aligned to grades 6–12 standards" },
                 { stat: "Expanding", sub: "Reaching schools nationwide" },
               ].map((item) => (
-                <div key={item.stat} className="rounded-xl border border-[#ddd6fe] p-4 bg-white">
+                <div key={item.stat} className="rounded-xl border border-[#b4a4f0] p-4 bg-white">
                   <div className="text-xs font-bold text-[#7c3aed] mb-0.5">{item.stat}</div>
-                  <div className="text-xs text-[#6b5f8e] leading-snug">{item.sub}</div>
+                  <div className="text-xs text-[#3d2f6b] leading-snug">{item.sub}</div>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden border border-[#ddd6fe] shadow-lg shadow-purple-100">
-              <img
+            <div className="rounded-2xl overflow-hidden border border-[#b4a4f0] shadow-lg shadow-purple-100">
+              <Image
                 src="/assets/homepage/IMG_3347.jpg"
-                alt="Tumor Tactics game components"
+                alt="Tumor Tactics game components laid out on a table"
+                width={720}
+                height={540}
                 className="w-full h-auto object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
               />
             </div>
-            
           </div>
         </div>
       </div>

@@ -36,23 +36,14 @@ const insights = [
 
 export default function TheProblem() {
   return (
-    <div className="bg-[#f8f5ff]">
+    <div className="bg-[#ede9fe]">
       {/* Hero */}
       <section
-        className="relative overflow-hidden py-28 text-center"
-        style={{
-          background: "linear-gradient(135deg, #1e1b2e 0%, #3b1f6e 50%, #2d1b69 100%)",
-        }}
+        className="py-28 text-center"
+        style={{ background: "#1e1b2e" }}
       >
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 50%, #a855f7 0%, transparent 50%), radial-gradient(circle at 80% 20%, #7c3aed 0%, transparent 40%)",
-          }}
-        />
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <p className="text-white/50 text-xs font-bold uppercase tracking-widest mb-6">Why This Matters</p>
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="text-white/75 text-xs font-bold uppercase tracking-widest mb-6">Why This Matters</p>
           <h1
             className="text-5xl sm:text-6xl md:text-7xl font-black text-white mb-6 leading-none"
             style={{ letterSpacing: "-0.03em" }}
@@ -60,7 +51,7 @@ export default function TheProblem() {
             The Problem<br />
             <span className="text-[#c4b5fd]">We&rsquo;re Solving</span>
           </h1>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
             Cancer touches nearly every family in America — yet almost nothing in our
             school curriculum prepares young people to understand it. That gap has consequences.
           </p>
@@ -68,7 +59,7 @@ export default function TheProblem() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-white border-b border-[#ddd6fe]">
+      <section className="py-20 bg-white border-b border-[#b4a4f0]">
         <div className="max-w-5xl mx-auto px-6">
           <h2
             className="text-3xl sm:text-4xl font-black text-[#1e1b2e] mb-14"
@@ -95,7 +86,7 @@ export default function TheProblem() {
             {stats.slice(1).map((s) => (
               <div
                 key={s.figure}
-                className="rounded-2xl border border-[#ddd6fe] bg-[#f8f5ff] px-6 py-7 hover:border-[#c4b5fd] hover:shadow-md hover:shadow-purple-100 transition-all duration-200"
+                className="rounded-2xl border border-[#b4a4f0] bg-[#ede9fe] px-6 py-7 hover:border-[#c4b5fd] hover:shadow-md hover:shadow-purple-100 transition-[border-color,box-shadow] duration-200"
               >
                 <div
                   className="text-4xl font-black text-[#7c3aed] mb-2 leading-none"
@@ -111,7 +102,7 @@ export default function TheProblem() {
       </section>
 
       {/* The education gap */}
-      <section className="py-20 bg-[#f8f5ff]">
+      <section className="py-20 bg-[#ede9fe]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -121,7 +112,7 @@ export default function TheProblem() {
               >
                 When it is taught,<br />it&rsquo;s through boring textbooks
               </h2>
-              <div className="space-y-4 text-[#6b5f8e] text-sm leading-relaxed">
+              <div className="space-y-4 text-[#3d2f6b] text-sm leading-relaxed">
                 <p>
                   The rare classroom that covers cancer at all typically does so through dense
                   reading passages and vocabulary lists — passive learning that doesn&rsquo;t stick
@@ -144,10 +135,10 @@ export default function TheProblem() {
               {insights.map((item) => (
                 <div
                   key={item.heading}
-                  className="rounded-xl border border-[#ddd6fe] bg-white p-5 hover:border-[#c4b5fd] hover:shadow-sm hover:shadow-purple-100 transition-all duration-200"
+                  className="rounded-xl border border-[#b4a4f0] bg-white p-5 hover:border-[#c4b5fd] hover:shadow-sm hover:shadow-purple-100 transition-[border-color,box-shadow] duration-200"
                 >
                   <h3 className="text-sm font-bold text-[#1e1b2e] mb-1.5">{item.heading}</h3>
-                  <p className="text-xs text-[#6b5f8e] leading-relaxed">{item.body}</p>
+                  <p className="text-xs text-[#3d2f6b] leading-relaxed">{item.body}</p>
                 </div>
               ))}
             </div>
@@ -156,7 +147,7 @@ export default function TheProblem() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-white border-t border-[#ddd6fe]">
+      <section className="py-20 bg-white border-t border-[#b4a4f0]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2
             className="text-3xl sm:text-4xl font-black text-[#1e1b2e] mb-4"
@@ -164,21 +155,21 @@ export default function TheProblem() {
           >
             Ready to be part of the solution?
           </h2>
-          <p className="text-[#6b5f8e] text-sm mb-8 max-w-xl mx-auto leading-relaxed">
+          <p className="text-[#3d2f6b] text-sm mb-8 max-w-xl mx-auto leading-relaxed">
             Bring Tumor Tactics to your classroom, donate to expand our reach, or partner
             with us to close the cancer education gap — one game at a time.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/get-involved"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90 active:scale-95 shadow-md"
-              style={{ background: "#7c3aed", boxShadow: "0 4px 16px rgba(124,58,237,0.3)" }}
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-white transition-[opacity,transform] hover:opacity-90 active:translate-y-px shadow-md"
+              style={{ background: "#7c3aed" }}
             >
               Get Involved
             </Link>
             <Link
               href="/game"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-[#7c3aed] border border-[#c4b5fd] bg-white hover:bg-[#ede9fe] transition-all"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-[#7c3aed] border border-[#c4b5fd] bg-white hover:bg-[#ede9fe] transition-[background-color,transform] active:translate-y-px"
             >
               See the Game
             </Link>

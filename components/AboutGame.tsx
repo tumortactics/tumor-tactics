@@ -61,7 +61,7 @@ export default function AboutGame() {
           {features.map((f, i) => (
             <div
               key={f.title}
-              className="rounded-xl p-7 border border-white/10 hover:border-white/20 transition-all duration-200 group"
+              className="rounded-xl p-7 border border-white/10 hover:border-white/20 transition-[border-color] duration-200 group"
               style={{ background: "#111" }}
             >
               <div
@@ -71,7 +71,7 @@ export default function AboutGame() {
                 0{i + 1}
               </div>
               <h3 className="text-base font-bold text-white mb-3">{f.title}</h3>
-              <p className="text-sm text-white/50 leading-relaxed">{f.description}</p>
+              <p className="text-sm text-white/75 leading-relaxed">{f.description}</p>
             </div>
           ))}
         </div>

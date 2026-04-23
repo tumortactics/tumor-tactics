@@ -22,7 +22,6 @@ export default function Home() {
         <WorkshopGallery />
         <UpcomingEvents />
         <Awards />
-        <Contact />
       </main>
       <Footer />
     </>

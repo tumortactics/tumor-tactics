@@ -21,14 +21,14 @@ export default function Footer() {
             <a
               key={href}
               href={href}
-              className="text-xs text-white/30 hover:text-white/70 transition-colors font-medium"
+              className="text-xs text-white/60 hover:text-white/90 transition-colors font-medium"
             >
               {["The Problem", "Our Story", "The Game", "Get Involved", "Contact"][i]}
             </a>
           ))}
         </div>
 
-        <p className="text-xs text-white/20 shrink-0">&copy; {year} Tumor Tactics</p>
+        <p className="text-xs text-white/50 shrink-0">&copy; {year} Tumor Tactics</p>
       </div>
     </footer>
   );

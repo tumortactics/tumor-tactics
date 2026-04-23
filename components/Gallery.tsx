@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 const slides = [
   { image: "/assets/IMG_3707.jpg", caption: "Tumor Tactics classroom session" },
@@ -13,7 +14,7 @@ export default function Gallery() {
   const [paused, setPaused] = useState(false);
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
-  const prev = () => setCurrent((c) => (c - 1 + slides.length) % slides.length);
+  const prev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
 
   useEffect(() => {
     if (paused) return;
@@ -22,7 +23,7 @@ export default function Gallery() {
   }, [paused, next]);
 
   return (
-    <section id="gallery" className="py-24 bg-[#f8f5ff]">
+    <section id="gallery" className="py-24 bg-[#ede9fe]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div>
@@ -36,14 +37,15 @@ export default function Gallery() {
               Tumor Tactics<br />in Action
             </h2>
           </div>
-          <p className="text-[#6b5f8e] text-sm max-w-xs leading-relaxed">
+          <p className="text-[#3d2f6b] text-sm max-w-xs leading-relaxed">
             From classroom pilots to community events — see the impact in schools across the country.
           </p>
         </div>
 
+        {/* Slideshow — aspect-ratio with max-height for mobile sanity */}
         <div
-          className="relative rounded-2xl overflow-hidden border border-[#ddd6fe] shadow-md shadow-purple-100"
-          style={{ height: "520px" }}
+          className="relative rounded-2xl overflow-hidden border border-[#b4a4f0] shadow-md shadow-purple-100 w-full"
+          style={{ aspectRatio: "16/9", maxHeight: 520 }}
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
@@ -54,17 +56,22 @@ export default function Gallery() {
                 i === current ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
             >
-              <img src={slide.image} alt={slide.caption} className="w-full h-full object-cover" />
-              <div
-                className="absolute inset-0"
-                style={{ background: "linear-gradient(to top, rgba(30,10,60,0.75) 0%, transparent 50%)" }}
+              <Image
+                src={slide.image}
+                alt={slide.caption}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1152px) 100vw, 1152px"
+                priority={i === 0}
+                loading={i === 0 ? "eager" : "lazy"}
               />
+              <div className="absolute inset-x-0 bottom-0 h-24 bg-[#1e1b2e]/60" />
             </div>
           ))}
 
           <button
             onClick={prev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-xl bg-white/90 hover:bg-white text-[#1e1b2e] flex items-center justify-center transition-all border border-[#ddd6fe] hover:border-[#c4b5fd] shadow-sm"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-xl bg-white/90 hover:bg-white text-[#1e1b2e] flex items-center justify-center transition-[background-color,border-color] border border-[#b4a4f0] hover:border-[#c4b5fd] shadow-sm"
             aria-label="Previous"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,7 +80,7 @@ export default function Gallery() {
           </button>
           <button
             onClick={next}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-xl bg-white/90 hover:bg-white text-[#1e1b2e] flex items-center justify-center transition-all border border-[#ddd6fe] hover:border-[#c4b5fd] shadow-sm"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-xl bg-white/90 hover:bg-white text-[#1e1b2e] flex items-center justify-center transition-[background-color,border-color] border border-[#b4a4f0] hover:border-[#c4b5fd] shadow-sm"
             aria-label="Next"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,34 +88,48 @@ export default function Gallery() {
             </svg>
           </button>
 
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2 items-center">
+          {/* Dot indicators — padded for 44px touch target */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-1 items-center">
             {slides.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
-                className="h-2 rounded-full transition-all duration-300"
-                style={{
-                  width: i === current ? "28px" : "8px",
-                  background: i === current ? "#7c3aed" : "rgba(255,255,255,0.5)",
-                }}
+                className="p-3 flex items-center justify-center"
                 aria-label={`Go to image ${i + 1}`}
-              />
+              >
+                <span
+                  className="block h-2 rounded-full transition-[width,background-color] duration-300"
+                  style={{
+                    width: i === current ? "28px" : "8px",
+                    background: i === current ? "#7c3aed" : "rgba(255,255,255,0.5)",
+                  }}
+                />
+              </button>
             ))}
           </div>
         </div>
 
+        {/* Thumbnails */}
         <div className="flex gap-3 mt-4">
           {slides.map((slide, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className="flex-1 h-20 rounded-xl overflow-hidden border-2 transition-all duration-200"
+              className="relative flex-1 h-20 rounded-xl overflow-hidden border-2 transition-[border-color,opacity] duration-200"
               style={{
-                borderColor: i === current ? "#7c3aed" : "#ddd6fe",
+                borderColor: i === current ? "#7c3aed" : "#b4a4f0",
                 opacity: i === current ? 1 : 0.5,
               }}
+              aria-label={`Go to: ${slide.caption}`}
             >
-              <img src={slide.image} alt="" className="w-full h-full object-cover" />
+              <Image
+                src={slide.image}
+                alt={slide.caption}
+                fill
+                className="object-cover"
+                sizes="200px"
+                loading="lazy"
+              />
             </button>
           ))}
         </div>

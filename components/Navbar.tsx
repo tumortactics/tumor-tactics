@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation";
 const tabs = [
   { label: "The Problem", href: "/the-problem", id: "the-problem" },
   { label: "The Game", href: "/game", id: "game" },
-  { label: "Gallery", href: "/gallery", id: "gallery" },
   { label: "Get Involved", href: "/get-involved", id: "get-involved" },
+  { label: "Our Team", href: "/team", id: "team" },
 ];
 
 export default function Navbar() {
@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="sticky top-0 z-50 bg-white/95 border-b border-[#ddd6fe] shadow-sm shadow-purple-100/50"
+      className="sticky top-0 z-50 bg-white/95 border-b border-[#b4a4f0] shadow-sm shadow-purple-100/50"
       style={{ backdropFilter: "blur(12px)" }}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -40,17 +40,17 @@ export default function Navbar() {
             <Link
               key={tab.label}
               href={tab.href}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-150 ${
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-[background-color,color] duration-150 ${
                 isActive(tab.href)
                   ? "bg-[#7c3aed] text-white"
-                  : "text-[#6b5f8e] hover:text-[#1e1b2e] hover:bg-[#ede9fe]"
+                  : "text-[#3d2f6b] hover:text-[#1e1b2e] hover:bg-[#ede9fe]"
               }`}
             >
               {tab.label}
             </Link>
           ))}
           <Link
-            href="/#contact"
+            href="/contact"
             className="ml-3 text-sm font-bold bg-[#1e1b2e] text-white px-5 py-2 rounded-lg hover:bg-[#7c3aed] transition-colors shadow-sm"
           >
             Contact Us
@@ -58,9 +58,10 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden p-2 text-[#6b5f8e] hover:text-[#1e1b2e] transition-colors"
+          className="md:hidden p-2 text-[#3d2f6b] hover:text-[#1e1b2e] transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
         >
           {isOpen ? (
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,13 +76,13 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden border-t border-[#ddd6fe] bg-white px-6 py-5 flex flex-col gap-3">
+        <div className="md:hidden border-t border-[#b4a4f0] bg-white px-6 py-5 flex flex-col gap-3">
           {tabs.map((tab) => (
             <Link
               key={tab.label}
               href={tab.href}
               className={`text-sm font-medium py-2 transition-colors ${
-                isActive(tab.href) ? "text-[#7c3aed]" : "text-[#6b5f8e] hover:text-[#1e1b2e]"
+                isActive(tab.href) ? "text-[#7c3aed]" : "text-[#3d2f6b] hover:text-[#1e1b2e]"
               }`}
               onClick={() => setIsOpen(false)}
             >
@@ -89,7 +90,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/#contact"
+            href="/contact"
             className="text-sm font-bold text-white bg-[#7c3aed] px-4 py-2 rounded-lg text-center mt-1 hover:opacity-90 transition-opacity"
             onClick={() => setIsOpen(false)}
           >

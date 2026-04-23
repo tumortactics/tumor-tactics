@@ -15,7 +15,7 @@ export default function Marquee() {
   return (
     <div
       className="overflow-hidden py-5"
-      style={{ background: "linear-gradient(90deg, #5b21b6 0%, #7c3aed 50%, #a855f7 100%)" }}
+      style={{ background: "#7c3aed" }}
     >
       <div className="flex gap-0 animate-marquee whitespace-nowrap">
         {repeated.map((item, i) => (

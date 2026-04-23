@@ -19,7 +19,7 @@ export default function Impact() {
                 {stat.number}
               </div>
               <div className="text-white font-bold text-sm mb-1">{stat.label}</div>
-              <div className="text-white/40 text-xs leading-relaxed">{stat.description}</div>
+              <div className="text-white/70 text-xs leading-relaxed">{stat.description}</div>
             </div>
           ))}
         </div>
