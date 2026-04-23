@@ -22,23 +22,17 @@ const leadership: LeaderMember[] = [
   {
     name: "Daniel Zhang",
     role: "Chief Executive Officer",
-    bio: "Leads vision, strategy, and organizational direction for Tumor Tactics. Conducted cancer research at UC Davis Cancer Center, Boston University, and Cambridge University.",
+    bio: "",
   },
   {
     name: "Zachary Tou",
     role: "Chief Operating Officer",
-    bio: "Oversees day-to-day operations and ensures smooth execution of initiatives across every arm of the organization.",
+    bio: "",
   },
   {
     name: "Ayan Pendharkar",
     role: "Chief Technology Officer",
-    bio: "Leads technical development and product innovation, building the digital infrastructure and tools that power Tumor Tactics' mission.",
-  },
-  {
-    name: "CMO",
-    role: "Chief Marketing Officer",
-    bio: "Heads marketing, outreach, and community engagement to grow Tumor Tactics' reach and build partnerships with schools nationwide.",
-    open: true,
+    bio: "",
   },
 ];
 
@@ -112,7 +106,7 @@ function Avatar({
 function LeaderCard({ member }: { member: LeaderMember }) {
   return (
     <div
-      className="rounded-lg p-5 pt-10 pb-10 flex flex-col items-center text-center transition-[outline-color,transform,box-shadow] duration-200 outline outline-2 outline-transparent hover:outline-[#1e1b2e] hover:-translate-y-1.5 hover:shadow-lg"
+      className="rounded-lg p-7 pt-26 pb-40 flex flex-col items-center text-center transition-[outline-color,transform,box-shadow] duration-200 outline outline-2 outline-transparent hover:outline-[#1e1b2e] hover:-translate-y-1.5 hover:shadow-lg"
       style={{
         border: member.featured
           ? "2px solid #1e1b2e"
@@ -209,8 +203,8 @@ export default function TeamPage() {
               <div className="h-px" style={{ background: "#b4a4f0" }} />
             </div>
 
-            {/* 4-column row */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* 3-column row */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
               {leadership.map((member) => (
                 <LeaderCard key={member.name} member={member} />
               ))}
