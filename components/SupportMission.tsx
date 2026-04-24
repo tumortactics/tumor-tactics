@@ -54,7 +54,7 @@ export default function SupportMission() {
               <p className="text-xs text-[#3d2f6b] mt-4">
                 Questions?{" "}
                 <a
-                  href="mailto:tumortactics@gmail.com"
+                  href="mailto:playtumortactics@gmail.com"
                   className="text-[#3d2f6b] hover:text-[#7c3aed] transition-colors underline underline-offset-2"
                 >
                   Email us directly.

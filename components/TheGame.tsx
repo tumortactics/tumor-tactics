@@ -342,7 +342,7 @@ export default function TheGame() {
             Physical card sets and complete game kits are not yet available for direct purchase.
             For bulk orders, educator inquiries, or classroom partnership requests,
             please reach out directly at{" "}
-            <span className="font-semibold text-white">tumortactics@gmail.com</span>{" "}
+            <span className="font-semibold text-white">playtumortactics@gmail.com</span>{" "}
             — we&rsquo;re happy to help.
           </p>
         </div>

@@ -151,10 +151,10 @@ export default function ContactPage() {
               <span className="font-bold">Note:</span> The contact form is currently not functional.
               To reach us directly, email{" "}
               <a
-                href="mailto:tumortactics@gmail.com"
+                href="mailto:playtumortactics@gmail.com"
                 className="font-bold underline underline-offset-2 hover:opacity-80 transition-opacity"
               >
-                tumortactics@gmail.com
+                playtumortactics@gmail.com
               </a>
               .
             </div>

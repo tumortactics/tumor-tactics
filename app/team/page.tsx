@@ -234,7 +234,7 @@ export default function TeamPage() {
               </p>
             </div>
             <a
-              href="mailto:tumortactics@gmail.com?subject=Team%20Inquiry"
+              href="mailto:playtumortactics@gmail.com?subject=Team%20Inquiry"
               className="inline-flex items-center justify-center px-7 py-3 font-bold text-sm text-white rounded-xl transition-opacity hover:opacity-90 shrink-0"
               style={{ background: "#7c3aed" }}
             >

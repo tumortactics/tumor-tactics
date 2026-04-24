@@ -45,13 +45,13 @@ export default function ShopPage() {
               <h2 className="text-2xl font-bold text-[#1e1b2e] mb-3">Shop Coming Soon</h2>
               <p className="text-[#6b5f8e] text-sm leading-relaxed mb-8">
                 We&apos;re setting up our online store. In the meantime, email us at{" "}
-                <a href="mailto:tumortactics@gmail.com" className="underline" style={{ color: "#6B21E8" }}>
-                  tumortactics@gmail.com
+                <a href="mailto:playtumortactics@gmail.com" className="underline" style={{ color: "#6B21E8" }}>
+                  playtumortactics@gmail.com
                 </a>{" "}
                 to place an order directly, or request a free kit if you&apos;re a Title I educator.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="mailto:tumortactics@gmail.com?subject=Tumor Tactics Kit Order" className="btn-primary">
+                <a href="mailto:playtumortactics@gmail.com?subject=Tumor Tactics Kit Order" className="btn-primary">
                   Email to Order
                 </a>
                 <Link href="/get-involved#free-kit" className="btn-secondary">
