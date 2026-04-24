@@ -45,7 +45,7 @@ function Avatar({
   src?: string;
   open?: boolean;
 }) {
-  const size = 124;
+  const size = 200;
 
   if (src) {
     return (
@@ -83,8 +83,8 @@ function Avatar({
     >
       <svg
         viewBox="0 0 88 88"
-        width={107}
-        height={107}
+        width={173}
+        height={173}
         fill="none"
         aria-hidden="true"
       >
