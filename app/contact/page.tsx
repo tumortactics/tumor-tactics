@@ -12,37 +12,17 @@ interface FormState {
 
 function ContactForm() {
   const [form, setForm] = useState<FormState>({ fullName: "", email: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("loading");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fullName: form.fullName,
-          email: form.email,
-          message: form.message,
-          subject: "Contact Form Submission",
-          senderType: "General",
-        }),
-      });
-      if (!res.ok) throw new Error("Failed");
-      setStatus("success");
-      setForm({ fullName: "", email: "", message: "" });
-    } catch {
-      setStatus("error");
-    }
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-[#ddd6fe] text-[#1e1b2e] text-sm placeholder:text-[#6b5f8e] bg-white focus:outline-none focus:ring-2 focus:ring-[#7c3aed] focus:border-transparent transition-[box-shadow,border-color]";
+    "w-full px-4 py-3 rounded-xl border border-[#b4a4f0] text-[#1e1b2e] text-sm placeholder:text-[#9585b8] bg-[#f5f3ff] cursor-not-allowed opacity-60 focus:outline-none transition-[box-shadow,border-color]";
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-4">
@@ -52,7 +32,7 @@ function ContactForm() {
           id="fullName"
           name="fullName"
           type="text"
-          required
+          disabled
           autoComplete="name"
           value={form.fullName}
           onChange={handleChange}
@@ -67,7 +47,7 @@ function ContactForm() {
           id="email"
           name="email"
           type="email"
-          required
+          disabled
           autoComplete="email"
           value={form.email}
           onChange={handleChange}
@@ -81,38 +61,16 @@ function ContactForm() {
         <textarea
           id="message"
           name="message"
-          required
+          disabled
           rows={6}
           value={form.message}
           onChange={handleChange}
           className={inputClass}
           placeholder="Message"
-          style={{ resize: "vertical", minHeight: 144 }}
+          style={{ resize: "none", minHeight: 144 }}
         />
       </div>
 
-      {status === "success" && (
-        <div
-          className="rounded-xl px-4 py-3 text-sm font-medium text-center"
-          style={{ background: "#f0fdf4", color: "#166534" }}
-          role="status"
-        >
-          Message sent! We&apos;ll get back to you within 2–3 business days.
-        </div>
-      )}
-      {status === "error" && (
-        <div
-          className="rounded-xl px-4 py-3 text-sm font-medium text-center"
-          style={{ background: "#fef2f2", color: "#991b1b" }}
-          role="alert"
-        >
-          Something went wrong. Email{" "}
-          <a href="mailto:tumortactics@gmail.com" className="underline">
-            tumortactics@gmail.com
-          </a>{" "}
-          directly.
-        </div>
-      )}
 
       <div className="pt-3 pb-1 space-y-2 text-center">
         <p className="text-xs text-[#6b5f8e] leading-relaxed">
@@ -144,11 +102,12 @@ function ContactForm() {
       <div className="flex justify-center pt-1">
         <button
           type="submit"
-          disabled={status === "loading"}
-          className="px-14 py-3.5 font-bold text-sm rounded-xl text-white transition-[opacity,transform] hover:opacity-90 active:translate-y-px disabled:opacity-60"
+          disabled
+          className="px-14 py-3.5 font-bold text-sm rounded-xl text-white cursor-not-allowed opacity-40"
           style={{ background: "#7c3aed" }}
+          title="Form is currently unavailable"
         >
-          {status === "loading" ? "Sending…" : "Submit"}
+          Submit
         </button>
       </div>
     </form>
@@ -164,23 +123,40 @@ export default function ContactPage() {
           <div className="max-w-xl mx-auto px-6">
 
             {/* Header */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <h1
                 className="text-5xl sm:text-6xl font-black text-[#1e1b2e] mb-6 leading-none"
                 style={{ letterSpacing: "-0.03em" }}
               >
                 Contact Us
               </h1>
-              <p className="text-sm text-[#6b5f8e] leading-relaxed mb-3 max-w-md mx-auto">
+              <p className="text-sm text-[#3d2f6b] leading-relaxed mb-3 max-w-md mx-auto">
                 Reach out to us and let us know if there is anything we can do for you.
               </p>
-              <p className="text-sm text-[#6b5f8e] leading-relaxed max-w-md mx-auto">
+              <p className="text-sm text-[#3d2f6b] leading-relaxed max-w-md mx-auto">
                 If you are an educator, reach out here to receive a quotation for a bulk purchase
                 order or to book a guided activity session with us at your school*.
               </p>
-              <p className="text-xs text-[#6b5f8e] mt-4">
+              <p className="text-xs text-[#3d2f6b] mt-4">
                 *Guided activities are currently only available in the San Diego area.
               </p>
+            </div>
+
+            {/* Disclaimer */}
+            <div
+              className="rounded-xl px-5 py-4 mb-8 text-sm leading-relaxed text-center"
+              style={{ background: "#fef9e7", border: "1px solid #f0c040", color: "#7a5c00" }}
+              role="note"
+            >
+              <span className="font-bold">Note:</span> The contact form is currently not functional.
+              To reach us directly, email{" "}
+              <a
+                href="mailto:tumortactics@gmail.com"
+                className="font-bold underline underline-offset-2 hover:opacity-80 transition-opacity"
+              >
+                tumortactics@gmail.com
+              </a>
+              .
             </div>
 
             <ContactForm />
