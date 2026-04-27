@@ -10,6 +10,7 @@ const tabs = [
   { label: "The Game", href: "/game", id: "game" },
   { label: "Get Involved", href: "/get-involved", id: "get-involved" },
   { label: "Our Team", href: "/team", id: "team" },
+  { label: "Shop", href: "/shop", id: "shop" },
 ];
 
 export default function Navbar() {
