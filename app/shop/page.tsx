@@ -41,7 +41,7 @@ export default function ShopPage() {
               {/* Product image */}
   
                 <Image
-                  src="/assets/Final Tumor Tactics Box Sleeve.png"
+                  src="/assets/Boxsleeve.png"
                   alt="Tumor Tactics Card Game Box"
                   width={480}
                   height={480}
