@@ -7,7 +7,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Shop | Tumor Tactics",
   description:
-    "Get your Tumor Tactics kit — $17.99 per deck. Free shipping on 2+ orders. 10% of proceeds supports ACS pediatric research.",
+    "Get your Tumor Tactics kit — $19.99 per deck. Free shipping on 2+ orders. 10% of proceeds supports ACS pediatric research.",
 };
 
 export default function ShopPage() {
@@ -29,7 +29,7 @@ export default function ShopPage() {
               Get Your Tumor Tactics Kit
             </h1>
             <p className="text-lg text-white/85 leading-relaxed">
-              Each kit includes a full card deck designed for classroom play, a printed two-sided rulebook, and educator discussion guides. $17.99 per deck.
+              Each kit includes a full card deck designed for classroom play, a printed two-sided rulebook, and educator discussion guides. $19.99 per deck.
             </p>
           </div>
         </section>
@@ -62,7 +62,7 @@ export default function ShopPage() {
                     className="text-3xl font-bold mb-2"
                     style={{ color: "#7c3aed" }}
                   >
-                    $17.99
+                    $19.99
                   </p>
 
                 </div>
