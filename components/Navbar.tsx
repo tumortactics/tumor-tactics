@@ -7,10 +7,10 @@ import { usePathname } from "next/navigation";
 
 const tabs = [
   { label: "The Problem", href: "/the-problem", id: "the-problem" },
-  { label: "The Game", href: "/game", id: "game" },
+  { label: "Tumor Tactics", href: "/shop", id: "shop" },
+  { label: "Free Download", href: "/game", id: "game" },
   { label: "Get Involved", href: "/get-involved", id: "get-involved" },
   { label: "Our Team", href: "/team", id: "team" },
-  { label: "Tumor Tactics", href: "/shop", id: "shop" },
 ];
 
 export default function Navbar() {

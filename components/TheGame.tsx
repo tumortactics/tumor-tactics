@@ -338,9 +338,8 @@ export default function TheGame() {
       <div style={{ background: "#2a1a5e", borderBottom: "1px solid #4a2fa0" }}>
         <div className="max-w-6xl mx-auto px-6 py-5">
           <p className="text-white/90 text-sm text-center leading-relaxed">
-            <span className="font-bold text-[#c4b5fd]">Our online shop is coming soon.</span>{" "}
-            Physical card sets and complete game kits are not yet available for direct purchase.
-            For bulk orders, educator inquiries, or classroom partnership requests,
+            <span className="font-bold text-[#c4b5fd]">Buy the full kit with all materials now at <a href="/shop" className="underline">tumortactics.com/shop</a></span>
+            <br></br>For bulk orders, educator inquiries, or classroom partnership requests,
             please reach out directly at{" "}
             <span className="font-semibold text-white">playtumortactics@gmail.com</span>{" "}
             — we&rsquo;re happy to help.

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import Image from "next/image";
+import ProductGallery from "@/components/ProductGallery";
 
 export const metadata: Metadata = {
   title: "Shop | Tumor Tactics",
@@ -38,15 +38,8 @@ export default function ShopPage() {
         <section className="py-24 bg-white">
           <div className="max-w-5xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              {/* Product image */}
-  
-                <Image
-                  src="/assets/Boxsleeve.png"
-                  alt="Tumor Tactics Card Game Box"
-                  width={480}
-                  height={480}
-                  className="w-full h-full object-contain p-8"
-                />
+              {/* Product gallery */}
+              <ProductGallery />
 
               {/* Product details + buy */}
               <div className="flex flex-col gap-6">
@@ -98,6 +91,20 @@ export default function ShopPage() {
                     </li>
                   ))}
                 </ul>
+
+                {/* Deer Canyon promo */}
+                <div
+                  className="flex items-start gap-3 rounded-xl px-4 py-3 text-sm"
+                  style={{ background: "#ede9fe", color: "#3d2f6b" }}
+                >
+                  <p>
+                    Came from Deer Canyon? Use code{" "}
+                    <span className="font-bold tracking-wide" style={{ color: "#7c3aed" }}>
+                      DEERCANYON
+                    </span>{" "}
+                    at checkout for <span className="font-bold">15% off</span>.
+                  </p>
+                </div>
 
                 {/* Square embed */}
                 <div className="pt-2">
