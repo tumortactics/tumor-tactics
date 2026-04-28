@@ -65,6 +65,8 @@ export default function ShopPage() {
                     "Full card deck designed for classroom play",
                     "Printed two-sided rulebook",
                     "2–4 players · Ages 8+",
+                    "10% of proceeds support pediatric cancer research through the American Cancer Society",
+                    "All other proceeds fund free kits for Title I and underserved schools nationwide",
                     "Free Shipping!"
                   ].map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
