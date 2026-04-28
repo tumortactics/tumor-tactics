@@ -102,54 +102,51 @@ export default function ShopPage() {
                     <span className="font-bold tracking-wide" style={{ color: "#7c3aed" }}>
                       DEERCANYON
                     </span>{" "}
-                    at checkout for <span className="font-bold">15% off</span>.
+                    at checkout for <span className="font-bold">20% off</span>.
                   </p>
                 </div>
 
                 {/* Square embed */}
                 <div className="pt-2">
-                  <div
-                    style={{
-                      overflow: "auto",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "flex-end",
-                      alignItems: "center",
-                      width: "100%",
-                      maxWidth: "340px",
-                      background: "#FFFFFF",
-                      border: "1px solid rgba(0, 0, 0, 0.1)",
-                      boxShadow: "-2px 10px 5px rgba(0, 0, 0, 0)",
-                      borderRadius: "10px",
-                      fontFamily:
-                        "SQ Market, SQ Market, Helvetica, Arial, sans-serif",
-                    }}
-                  >
-                    <div style={{ padding: "20px", width: "100%" }}>
-                      <a
-                        id="embedded-checkout-modal-checkout-button"
-                        target="_blank"
-                        data-url="https://square.link/u/5eGF3o7o?src=embed"
-                        href="https://square.link/u/5eGF3o7o?src=embed"
-                        style={{
-                          display: "block",
-                          fontSize: "18px",
-                          lineHeight: "48px",
-                          height: "48px",
-                          color: "#ffffff",
-                          width: "100%",
-                          backgroundColor: "#7c3aed",
-                          textAlign: "center",
-                          boxShadow: "0 0 0 1px rgba(0,0,0,.1) inset",
-                          borderRadius: "6px",
-                          textDecoration: "none",
-                        }}
-                      >
-                        Buy Now
-                      </a>
+                      <div
+                      style={{
+                        overflow: "auto",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "flex-end",
+                        alignItems: "center",
+                        width: "259px",
+                        background: "#FFFFFF",
+                        border: "1px solid rgba(0, 0, 0, 0.1)",
+                        boxShadow: "-2px 10px 5px rgba(0, 0, 0, 0)",
+                        borderRadius: "10px",
+                        fontFamily: "SQ Market, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      <div style={{ padding: "20px" }}>
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          href="https://square.link/u/5eGF3o7o?src=embed"
+                          style={{
+                            display: "inline-block",
+                            fontSize: "18px",
+                            lineHeight: "48px",
+                            height: "48px",
+                            color: "#ffffff",
+                            minWidth: "212px",
+                            backgroundColor: "#7c3aed",
+                            textAlign: "center",
+                            boxShadow: "0 0 0 1px rgba(0,0,0,.1) inset",
+                            borderRadius: "6px",
+                            textDecoration: "none",
+                          }}
+                        >
+                          Buy now
+                        </a>
+                      </div>
                     </div>
-                    
-                  </div>
+
                   <script
                     dangerouslySetInnerHTML={{
                       __html: `
