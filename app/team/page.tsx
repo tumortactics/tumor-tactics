@@ -22,16 +22,19 @@ const leadership: LeaderMember[] = [
   {
     name: "Daniel Zhang",
     role: "Chief Executive Officer",
+    image: "/assets/Daniel.jpg",
     bio: "",
   },
   {
     name: "Zachary Tou",
     role: "Chief Operating Officer",
+    image: "/assets/zach.jpg",
     bio: "",
   },
   {
     name: "Ayan Pendharkar",
     role: "Chief Technology Officer",
+    image: "/assets/ayan (2).jpg",
     bio: "",
   },
 ];
