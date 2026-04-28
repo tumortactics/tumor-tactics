@@ -29,15 +29,15 @@ export default function ShopPage() {
               Get Your Tumor Tactics Kit
             </h1>
             <p className="text-lg text-white/85 leading-relaxed">
-              Each kit includes a full card deck designed for classroom play, a printed two-sided rulebook, and educator discussion guides. $19.99 per deck.
+              Each kit includes a full card deck designed for classroom play, and a printed two-sided rulebook. $19.99 per deck.
             </p>
           </div>
         </section>
 
         {/* Product section */}
         <section className="py-24 bg-white">
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 items-center">
               {/* Product gallery */}
               <ProductGallery />
 
@@ -64,8 +64,8 @@ export default function ShopPage() {
                   {[
                     "Full card deck designed for classroom play",
                     "Printed two-sided rulebook",
-                    "Educator discussion guides",
                     "2–4 players · Ages 8+",
+                    "Free Shipping!"
                   ].map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <span

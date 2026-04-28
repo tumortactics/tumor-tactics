@@ -6,9 +6,10 @@ import Image from "next/image";
 const images = [
   { src: "/assets/Boxsleeve.png", alt: "Tumor Tactics Box" },
   { src: "/assets/IMG_3020.png", alt: "Tumor Tactics gameplay" },
-  { src: "/assets/IMG_4900.png", alt: "Tumor Tactics cards" },
-  { src: "/assets/IMG_5656.png", alt: "Tumor Tactics in action" },
   { src: "/assets/IMG_7650.png", alt: "Tumor Tactics workshop" },
+  { src: "/assets/IMG_5656.png", alt: "Tumor Tactics in action" },
+  { src: "/assets/IMG_4900.png", alt: "Tumor Tactics rulebook" },
+
 ];
 
 export default function ProductGallery() {
@@ -70,7 +71,7 @@ export default function ProductGallery() {
         {/* Image viewport */}
         <div
           className="flex-1 rounded-2xl overflow-hidden flex items-center justify-center"
-          style={{ background: "#F5F3FF", minHeight: "380px" }}
+          style={{ background: "#F5F3FF", minHeight: "480px" }}
         >
           <div
             className={`w-full h-full flex items-center justify-center transition-all duration-[280ms] ease-in-out ${
@@ -80,10 +81,10 @@ export default function ProductGallery() {
             <Image
               src={images[active].src}
               alt={images[active].alt}
-              width={480}
-              height={480}
+              width={720}
+              height={720}
               className="w-full object-contain p-6"
-              style={{ maxHeight: "420px" }}
+              style={{ maxHeight: "600px" }}
             />
           </div>
         </div>
