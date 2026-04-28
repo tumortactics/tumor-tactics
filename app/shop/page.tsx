@@ -129,8 +129,8 @@ export default function ShopPage() {
                       <a
                         id="embedded-checkout-modal-checkout-button"
                         target="_blank"
-                        data-url="https://square.link/u/TtChb1V2?src=embd"
-                        href="https://square.link/u/TtChb1V2?src=embed"
+                        data-url="https://square.link/u/5eGF3o7o?src=embed"
+                        href="https://square.link/u/5eGF3o7o?src=embed"
                         style={{
                           display: "block",
                           fontSize: "18px",
@@ -148,6 +148,7 @@ export default function ShopPage() {
                         Buy Now
                       </a>
                     </div>
+                    
                   </div>
                   <script
                     dangerouslySetInnerHTML={{
