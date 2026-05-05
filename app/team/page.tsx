@@ -37,6 +37,12 @@ const leadership: LeaderMember[] = [
     image: "/assets/ayan (2).jpg",
     bio: "",
   },
+    {
+    name: "Felix Yang",
+    role: "Chief Marketing Officer",
+    image: "/assets/felix_yang.png",
+    bio: "",
+  },
 ];
 
 function Avatar({
