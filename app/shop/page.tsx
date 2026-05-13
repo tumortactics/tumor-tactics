@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import ProductGallery from "@/components/ProductGallery";
 
 export const metadata: Metadata = {
@@ -31,6 +32,24 @@ export default function ShopPage() {
             <p className="text-lg text-white/85 leading-relaxed">
               Each kit includes a full card deck designed for classroom play, and a printed two-sided rulebook. $19.99 per deck.
             </p>
+            <div className="flex items-center justify-center gap-2 mt-6">
+              <span className="text-sm text-white/55 font-medium uppercase tracking-widest">A project by</span>
+              <a
+                href="https://steamlabsintl.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center opacity-80 hover:opacity-100 transition-opacity duration-200"
+              >
+                <Image
+                  src="/assets/steamlabs_logo.png"
+                  alt="STEAMLabs International"
+                  width={120}
+                  height={30}
+                  className="object-contain"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
+              </a>
+            </div>
           </div>
         </section>
 

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 const tabs = [
   { label: "The Problem", href: "/the-problem", id: "the-problem" },
-  //{ label: "Tumor Tactics", href: "/shop", id: "shop" },
+  { label: "Tumor Tactics", href: "/shop", id: "shop" },
   { label: "Free Download", href: "/game", id: "game" },
   { label: "Get Involved", href: "/get-involved", id: "get-involved" },
   { label: "Our Team", href: "/team", id: "team" },
