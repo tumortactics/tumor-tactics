@@ -23,12 +23,24 @@ export default function Hero() {
             <span style={{ color: "#c4b5fd" }}>Tactics</span>
           </h1>
 
-          <p
-            className="text-xl text-white/85 font-semibold mb-4"
-            style={{ letterSpacing: "-0.01em" }}
-          >
-            Transforming Cancer Education Through Play.
-          </p>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-sm text-white/55 font-medium uppercase tracking-widest">A project by</span>
+            <a
+              href="https://steamlabsintl.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center opacity-80 hover:opacity-100 transition-opacity duration-200"
+            >
+              <Image
+                src="/assets/steamlabs_logo.png"
+                alt="STEAMLabs International"
+                width={140}
+                height={36}
+                className="object-contain"
+                style={{ filter: "brightness(0) invert(1)" }}
+              />
+            </a>
+          </div>
 
           <p className="text-sm text-white/65 leading-relaxed mb-10 max-w-sm">
             A nonprofit educational initiative that brings cancer biology to life
