@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Story() {
   return (
@@ -13,47 +14,42 @@ export default function Story() {
               className="text-4xl sm:text-5xl font-bold text-[#1e1b2e] mb-8 leading-none"
               style={{ letterSpacing: "-0.03em" }}
             >
-              Education Born from<br />
-              <span className="text-[#7c3aed]">Curiosity and Purpose</span>
+              Built by two students<br />
+              <em className="not-italic text-[#7c3aed]">who needed it first.</em>
             </h2>
 
             <div className="space-y-5 text-[#3d2f6b] leading-relaxed text-sm">
               <p>
-                Tumor Tactics began with a simple observation: cancer is one of
-                the most prevalent and complex diseases in the world, yet most
-                students encounter it only through dense textbooks or difficult
-                personal experiences. We believed there had to be a better way
-                to teach it.
+                Daniel was nine years old when his grandmother, the person who raised him, was diagnosed with stage 3 pancreatic cancer. He spent eight months watching her get weaker in hospital rooms he did not understand. The treatments seemed to be hurting her, and no one explained why. He was too young to know what questions to ask, and no one thought to offer the answers.
               </p>
               <p>
-                A team of student researchers and educators came together to
-                bridge the gap between scientific rigor and accessible learning.
-                Working closely with biology teachers and health educators, we
-                set out to design an experience that would not only cover cancer
-                biology — from tumor growth and immune response to treatment
-                decision-making — but would make students genuinely engaged with
-                the material.
+                Six years later, his grandfather was diagnosed. In the doctor&apos;s office that day, Daniel&apos;s seven-year-old sister was sitting with the same look on her face that Daniel remembered from his own childhood: trying to understand something impossible with no one giving her the words. So he became the one who gave them. He read the medical reports. He translated the complicated language into something a seven-year-old could hold onto. He gave her what he had once desperately needed.
               </p>
               <p>
-                The result was Tumor Tactics: a strategy-based card game that
-                simulates the biological complexity of cancer in an interactive,
-                classroom-friendly format. Since our founding, we have partnered
-                with schools, science educators, and cancer awareness
-                organizations to bring this resource to students nationwide.
+                Zachary grew up on strategy card games and watched his great-aunt go through cancer treatment with the same question: why is there no way for a kid to actually understand what is happening? Together, they set out to build what neither of them had. Not a simplified version of cancer, but a real one, grounded in actual oncology, where players make the same decisions oncologists make and learn the science by living inside it.
               </p>
             </div>
 
             <div className="mt-8 grid grid-cols-3 gap-4">
               {[
-                { stat: "Founded", sub: "By student researchers & educators" },
-                { stat: "Classroom-Ready", sub: "Aligned to grades 6–12 standards" },
-                { stat: "Expanding", sub: "Reaching schools nationwide" },
+                { stat: "150+", sub: "students in our first classroom workshop at Deer Canyon Elementary" },
+                { stat: "Ages 8+", sub: "K-8 · no biology background needed" },
+                { stat: "10% of proceeds", sub: "go directly to the American Cancer Society" },
               ].map((item) => (
                 <div key={item.stat} className="rounded-xl border border-[#b4a4f0] p-4 bg-white">
                   <div className="text-xs font-bold text-[#7c3aed] mb-0.5">{item.stat}</div>
                   <div className="text-xs text-[#3d2f6b] leading-snug">{item.sub}</div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-8">
+              <Link
+                href="/founding-story"
+                className="text-sm font-semibold text-[#7c3aed] underline underline-offset-2 hover:text-[#5b21b6] transition-colors"
+              >
+                Read our full story →
+              </Link>
             </div>
           </div>
 

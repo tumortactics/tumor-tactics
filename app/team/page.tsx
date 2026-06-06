@@ -212,8 +212,8 @@ export default function TeamPage() {
               <div className="h-px" style={{ background: "#b4a4f0" }} />
             </div>
 
-            {/* 3-column row */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {/* 4-column row */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
               {leadership.map((member) => (
                 <LeaderCard key={member.name} member={member} />
               ))}

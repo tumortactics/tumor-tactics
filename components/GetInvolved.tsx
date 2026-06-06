@@ -11,7 +11,7 @@ const options = [
   {
     title: "Bring the Game to Your School",
     description:
-      "Educators can request a Tumor Tactics classroom kit. We provide game materials, educator guides, and lesson plans aligned with science standards for grades 6–12.",
+      "Educators can request a Tumor Tactics classroom kit. We provide game materials, educator guides, and lesson plans aligned with science standards for ages 8+.",
     cta: "Request a Kit",
     href: "mailto:playtumortactics@gmail.com?subject=Game%20Kit%20Request",
     accent: "#1e1b2e",
@@ -21,9 +21,9 @@ const options = [
     title: "Donate to Support Expansion",
     description:
       "Your contribution directly funds game kit production, educator training, and outreach programs that bring Tumor Tactics to underserved communities.",
-    cta: "Support Our Mission",
-    target: "_blank",
-    href: "https://www.zeffy.com/en-US/donation-form/support-tumor-tactics-in-every-classroom",
+    cta: null as string | null,
+    href: null as string | null,
+    donationNote: true,
     accent: "#a855f7",
     accentText: "#fff",
   },
@@ -62,14 +62,26 @@ export default function GetInvolved() {
               />
               <h3 className="text-base font-bold text-[#1e1b2e] mb-3">{opt.title}</h3>
               <p className="text-sm text-[#3d2f6b] leading-relaxed flex-1 mb-7">{opt.description}</p>
-              <a
-                href={opt.href}
-                target={opt.target || "_self"}
-                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-lg transition-[opacity,transform] hover:opacity-90 active:translate-y-px"
-                style={{ background: opt.accent, color: opt.accentText }}
-              >
-                {opt.cta}
-              </a>
+              {opt.donationNote ? (
+                <p className="text-sm italic text-[#6b5f8e]">
+                  Donation page coming soon. To donate now, email us at{" "}
+                  <a
+                    href="mailto:playtumortactics@gmail.com"
+                    className="underline hover:text-[#7c3aed] transition-colors"
+                  >
+                    playtumortactics@gmail.com
+                  </a>
+                  .
+                </p>
+              ) : (
+                <a
+                  href={opt.href!}
+                  className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-lg transition-[opacity,transform] hover:opacity-90 active:translate-y-px"
+                  style={{ background: opt.accent, color: opt.accentText }}
+                >
+                  {opt.cta}
+                </a>
+              )}
             </div>
           ))}
         </div>

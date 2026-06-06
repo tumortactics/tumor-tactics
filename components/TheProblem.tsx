@@ -43,7 +43,10 @@ export default function TheProblem() {
         style={{ background: "#1e1b2e" }}
       >
         <div className="max-w-4xl mx-auto px-6">
-          <p className="text-white/75 text-xs font-bold uppercase tracking-widest mb-6">Why This Matters</p>
+          <p className="text-white/75 text-xs font-bold uppercase tracking-widest mb-4">Why This Matters</p>
+          <p className="text-[#c4b5fd] text-lg font-medium mb-6 max-w-xl mx-auto leading-snug">
+            Kids grow up knowing cancer as something scary, not something they can understand.
+          </p>
           <h1
             className="text-5xl sm:text-6xl md:text-7xl font-black text-white mb-6 leading-none"
             style={{ letterSpacing: "-0.03em" }}

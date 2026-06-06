@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const images = [
   { src: "/assets/Boxsleeve.png", alt: "Tumor Tactics Box" },
-  { src: "/assets/IMG_3020.png", alt: "Tumor Tactics gameplay" },
+  { src: "/assets/content.jpg", alt: "Tumor Tactics gameplay" },
   { src: "/assets/IMG_7650.png", alt: "Tumor Tactics workshop" },
   { src: "/assets/IMG_5656.png", alt: "Tumor Tactics in action" },
   { src: "/assets/IMG_4900.png", alt: "Tumor Tactics rulebook" },

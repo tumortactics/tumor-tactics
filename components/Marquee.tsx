@@ -4,7 +4,7 @@ const items = [
   "Science Made Fun",
   "Nonprofit Initiative",
   "Classroom-Ready",
-  "Grades 6–12",
+  "Ages 8+",
   "Evidence-Based Learning",
   "Student Empowerment",
 ];

@@ -1,15 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Impact from "@/components/Impact";
+import Marquee from "@/components/Marquee";
 import Story from "@/components/Story";
 import WorkshopGallery from "@/components/WorkshopGallery";
+import PressSection from "@/components/PressSection";
 import UpcomingEvents from "@/components/UpcomingEvents";
+import NonprofitModel from "@/components/NonprofitModel";
 import Awards from "@/components/Awards";
-import SupportMission from "@/components/SupportMission";
-import GetInvolved from "@/components/GetInvolved";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Marquee from "@/components/Marquee";
 
 export default function Home() {
   return (
@@ -20,7 +18,9 @@ export default function Home() {
         <Marquee />
         <Story />
         <WorkshopGallery />
+        <PressSection />
         <UpcomingEvents />
+        <NonprofitModel />
         <Awards />
       </main>
       <Footer />

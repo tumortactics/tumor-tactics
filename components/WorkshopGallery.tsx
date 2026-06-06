@@ -13,13 +13,19 @@ const doubled = [...workshopImages, ...workshopImages];
 export default function WorkshopGallery() {
   return (
     <section className="py-20 bg-white border-t border-[#b4a4f0] overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 mb-10">
+      <div className="max-w-6xl mx-auto px-6 mb-10 flex items-end justify-between gap-4">
         <h2
           className="text-3xl sm:text-4xl font-bold text-[#1e1b2e]"
           style={{ letterSpacing: "-0.03em" }}
         >
           Tumor Tactics in the Wild
         </h2>
+        <Link
+          href="/get-involved"
+          className="text-sm font-semibold text-[#7c3aed] underline underline-offset-2 hover:text-[#5b21b6] transition-colors shrink-0"
+        >
+          See where we&apos;ve been →
+        </Link>
       </div>
 
       <div className="relative">
@@ -42,7 +48,6 @@ export default function WorkshopGallery() {
           ))}
         </div>
       </div>
-
     </section>
   );
 }
