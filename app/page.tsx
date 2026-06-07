@@ -20,8 +20,8 @@ export default function Home() {
         <WorkshopGallery />
         <PressSection />
         <UpcomingEvents />
-        <NonprofitModel />
         <Awards />
+        <NonprofitModel />
       </main>
       <Footer />
     </>

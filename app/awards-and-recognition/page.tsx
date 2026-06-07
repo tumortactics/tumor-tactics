@@ -32,12 +32,12 @@ const press = [
   {
     title: "\"The Kindness of Being Seen\"",
     source: "Matt's Kindness Ripples On, May 2026",
-    href: null, // Daniel to provide URL
+    href: "https://kindovermatter.com/matt-kurtz-kindness-grant-winner-announcement-19/",
   },
   {
     title: "\"Service Spotlight: Tumor Tactics\"",
     source: "The Smile Project, May 2026",
-    href: null, // Daniel to provide URL
+    href: "https://www.the-smile-project.com/single-post/service-spotlight-tumor-tactics",
   },
 ];
 
