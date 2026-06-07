@@ -4,7 +4,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-[#2d1b69] bg-[#1e1b2e]">
+    <footer className="border-t border-[#2d1b69] bg-[#453c61]">
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
         <div className="flex items-center gap-3">
           <Image
@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="flex items-center gap-4">
           {/* Instagram — placeholder until @playtumortactics is confirmed live */}
           <a
-            href="https://www.instagram.com/playtumortactics"
+            href="https://www.instagram.com/steamlabs_official/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"

@@ -1,10 +1,10 @@
 const options = [
   {
-    title: "Partner With Us",
+    title: "Join Our Team",
     description:
       "Organizations and institutions can collaborate with Tumor Tactics to bring cancer education to more classrooms. We welcome partnerships with schools, hospitals, nonprofits, and research institutions.",
     cta: "Become a Partner",
-    href: "mailto:playtumortactics@gmail.com?subject=Partnership%20Inquiry",
+    href: "mailto:playtumortactics@gmail.com?subject=I%20would%20like%20join%20the%20team!",
     accent: "#7c3aed",
     accentText: "#fff",
   },
