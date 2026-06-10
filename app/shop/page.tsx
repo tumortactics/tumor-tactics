@@ -119,11 +119,11 @@ export default function ShopPage() {
                   style={{ background: "#ede9fe", color: "#3d2f6b" }}
                 >
                   <p>
-                    Came from LWBC? Use code{" "}
+                    Came from SD country fair? Use code{" "}
                     <span className="font-bold tracking-wide" style={{ color: "#7c3aed" }}>
-                      LWBC
+                      COUNTYFAIR
                     </span>{" "}
-                    at checkout for <span className="font-bold">20% off</span>.
+                    at checkout for <span className="font-bold">10% off</span>.
                   </p>
                 </div>
 

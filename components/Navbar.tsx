@@ -126,13 +126,13 @@ export default function Navbar() {
           >
             Get Involved
           </Link>
-
-          <Link
+            
+          {/* <Link
             href="/contact"
             className="ml-3 text-sm font-bold bg-[#1e1b2e] text-white px-5 py-2 rounded-lg hover:bg-[#7c3aed] transition-colors shadow-sm"
           >
             Contact Us
-          </Link>
+          </Link> */}
         </div>
 
         <button
