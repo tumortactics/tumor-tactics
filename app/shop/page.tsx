@@ -119,7 +119,7 @@ export default function ShopPage() {
                   style={{ background: "#ede9fe", color: "#3d2f6b" }}
                 >
                   <p>
-                    Came from SD country fair? Use code{" "}
+                    Came from SD county fair? Use code{" "}
                     <span className="font-bold tracking-wide" style={{ color: "#7c3aed" }}>
                       COUNTYFAIR
                     </span>{" "}
