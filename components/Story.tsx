@@ -56,7 +56,7 @@ export default function Story() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden border border-[#b4a4f0] shadow-lg shadow-purple-100">
               <Image
-                src="/assets/homepage/IMG_3347.jpg"
+                src="/assets/homepage/IMG_3347.jpeg"
                 alt="Tumor Tactics game components laid out on a table"
                 width={720}
                 height={540}

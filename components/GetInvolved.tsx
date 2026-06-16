@@ -1,12 +1,13 @@
 const options = [
   {
-    title: "Join Our Team",
+    title: "Partner With Us",
     description:
       "Organizations and institutions can collaborate with Tumor Tactics to bring cancer education to more classrooms. We welcome partnerships with schools, hospitals, nonprofits, and research institutions.",
     cta: "Become a Partner",
     href: "mailto:playtumortactics@gmail.com?subject=I%20would%20like%20join%20the%20team!",
     accent: "#7c3aed",
     accentText: "#fff",
+    note: null as string | null,
   },
   {
     title: "Bring the Game to Your School",
@@ -16,16 +17,17 @@ const options = [
     href: "mailto:playtumortactics@gmail.com?subject=Game%20Kit%20Request",
     accent: "#1e1b2e",
     accentText: "#fff",
+    note: null as string | null,
   },
   {
-    title: "Donate to Support Expansion",
+    title: "Join the Tumor Tactics Team",
     description:
-      "Your contribution directly funds game kit production, educator training, and outreach programs that bring Tumor Tactics to underserved communities.",
-    cta: null as string | null,
-    href: null as string | null,
-    donationNote: true,
+      "We're always looking for passionate students to help run events, demo the game at schools and fairs, and spread cancer education in their communities. No experience needed, just curiosity and drive.",
+    cta: "Email Us With This Info",
+    href: "mailto:playtumortactics@gmail.com",
     accent: "#a855f7",
     accentText: "#fff",
+    note: "Include your name, school and grade, and a sentence or two about why you want to get involved.",
   },
 ];
 
@@ -61,27 +63,17 @@ export default function GetInvolved() {
                 style={{ background: opt.accent }}
               />
               <h3 className="text-base font-bold text-[#1e1b2e] mb-3">{opt.title}</h3>
-              <p className="text-sm text-[#3d2f6b] leading-relaxed flex-1 mb-7">{opt.description}</p>
-              {opt.donationNote ? (
-                <p className="text-sm italic text-[#6b5f8e]">
-                  Donation page coming soon. To donate now, email us at{" "}
-                  <a
-                    href="mailto:playtumortactics@gmail.com"
-                    className="underline hover:text-[#7c3aed] transition-colors"
-                  >
-                    playtumortactics@gmail.com
-                  </a>
-                  .
-                </p>
-              ) : (
-                <a
-                  href={opt.href!}
-                  className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-lg transition-[opacity,transform] hover:opacity-90 active:translate-y-px"
-                  style={{ background: opt.accent, color: opt.accentText }}
-                >
-                  {opt.cta}
-                </a>
+              <p className={`text-sm text-[#3d2f6b] leading-relaxed flex-1 ${opt.note ? "mb-4" : "mb-7"}`}>{opt.description}</p>
+              {opt.note && (
+                <p className="text-xs text-[#6b5f8e] italic mb-4">{opt.note}</p>
               )}
+              <a
+                href={opt.href!}
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold rounded-lg transition-[opacity,transform] hover:opacity-90 active:translate-y-px"
+                style={{ background: opt.accent, color: opt.accentText }}
+              >
+                {opt.cta}
+              </a>
             </div>
           ))}
         </div>

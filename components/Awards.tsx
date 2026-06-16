@@ -61,6 +61,18 @@ const awards: Award[] = [
     alt: "ECGBL 14th Educational Games Competition",
     descriptor: "ECGBL 14th Educational Games Finalist",
   },
+  {
+    src: "/assets/IMG_5023.png",
+    alt: "Young Planet Leader",
+    href: "https://youngplanetleaders.org/featured-leaders-2/",
+    descriptor: "July 2026 Young Planet Leader",
+  },
+  {
+    src: "/assets/IMG_3305.png",
+    alt: "Community Champion of the Month",
+    href: "https://sd38.senate.ca.gov/community-champion-month-district-38",
+    descriptor: "Community Champion of the Month (August 2025)",
+  },
 ];
 
 // Duplicate for seamless looping
