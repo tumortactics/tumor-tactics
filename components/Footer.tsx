@@ -17,13 +17,13 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-          {["/the-problem", "/#story", "/how-to-play", "/get-involved", "/#contact"].map((href, i) => (
+          {["/the-problem", "/#story", "/how-to-play", "/get-involved"].map((href, i) => (
             <a
               key={href}
               href={href}
               className="text-xs text-white/60 hover:text-white/90 transition-colors font-medium"
             >
-              {["The Problem", "Our Story", "The Game", "Get Involved", "Contact"][i]}
+              {["The Problem", "Our Story", "The Game", "Get Involved"][i]}
             </a>
           ))}
         </div>
