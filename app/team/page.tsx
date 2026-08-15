@@ -43,6 +43,12 @@ const leadership: LeaderMember[] = [
     image: "/assets/felix_yang.png",
     bio: "",
   },
+  {
+    name: "Justin Sun",
+    role: "Director of Education Initiatives",
+    image: "/assets/justin_sun.jpg",
+    bio: "",
+  },
 ];
 
 function Avatar({
@@ -212,10 +218,12 @@ export default function TeamPage() {
               <div className="h-px" style={{ background: "#b4a4f0" }} />
             </div>
 
-            {/* 4-column row */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* 3-column row, centered wrap */}
+            <div className="flex flex-wrap justify-center gap-5">
               {leadership.map((member) => (
-                <LeaderCard key={member.name} member={member} />
+                <div key={member.name} className="w-full sm:w-[calc((100%-2.5rem)/3)]">
+                  <LeaderCard member={member} />
+                </div>
               ))}
             </div>
 
