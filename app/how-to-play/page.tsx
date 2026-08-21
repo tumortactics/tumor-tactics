@@ -233,7 +233,8 @@ export default function HowToPlayPage() {
         <section className="py-20 bg-[#ede9fe] border-t border-[#b4a4f0]">
           <div className="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="/assets/Rulebook.pdf"
+              href="https://drive.google.com/file/d/1U7TyNuv27NjsQPOuZaB23LRqlKlTb3HB/view?usp=sharing"
+              target="_blank"
               download
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-white transition-[opacity,transform] hover:opacity-90 active:translate-y-px shadow-md"
               style={{ background: "#1e1b2e" }}

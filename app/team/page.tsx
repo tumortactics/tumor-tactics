@@ -44,11 +44,18 @@ const leadership: LeaderMember[] = [
     bio: "",
   },
   {
+    name: "Carina Wu",
+    role: "Chief Design Officer",
+    image: "/assets/carina.png",
+    bio: "",
+  },
+  {
     name: "Justin Sun",
     role: "Director of Education Initiatives",
     image: "/assets/justin_sun.jpg",
     bio: "",
   },
+    
 ];
 
 function Avatar({

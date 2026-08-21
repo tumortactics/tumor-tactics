@@ -92,7 +92,8 @@ function RulebookStack() {
         </div>
 
         <a
-          href="/assets/Rulebook.pdf"
+          href="https://drive.google.com/file/d/1U7TyNuv27NjsQPOuZaB23LRqlKlTb3HB/view?usp=sharing"
+          target = "_blank"
           download
           className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white transition-opacity hover:opacity-90 shadow-md"
           style={{ background: "#7c3aed" }}
