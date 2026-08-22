@@ -20,12 +20,7 @@ export default function WorkshopGallery() {
         >
           Tumor Tactics in the Wild
         </h2>
-        <Link
-          href="/get-involved"
-          className="text-sm font-semibold text-[#7c3aed] underline underline-offset-2 hover:text-[#5b21b6] transition-colors shrink-0"
-        >
-          See where we&apos;ve been →
-        </Link>
+        
       </div>
 
       <div className="relative">
