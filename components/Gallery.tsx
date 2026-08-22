@@ -38,7 +38,7 @@ export default function Gallery() {
             </h2>
           </div>
           <p className="text-[#3d2f6b] text-sm max-w-xs leading-relaxed">
-            From classroom pilots to community events — see the impact in schools across the country.
+            Photos from classroom pilots and community events across the country.
           </p>
         </div>
 

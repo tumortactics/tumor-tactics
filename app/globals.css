@@ -39,6 +39,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background: #ddd6fe;
+  color: #1e1b2e;
+}
+
+:focus-visible {
+  outline: 3px solid #7c3aed;
+  outline-offset: 3px;
+}
+
 h1, h2, h3 {
   font-family: "Bricolage Grotesque", "SQ Market Regular Regular", system-ui, sans-serif;
 }
@@ -51,4 +61,14 @@ h1, h2, h3 {
 .animate-marquee {
   animation: marquee 28s linear infinite;
   will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee {
+    animation: none;
+  }
 }

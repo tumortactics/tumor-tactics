@@ -43,10 +43,10 @@ export default function ShopPage() {
                 <Image
                   src="/assets/steamlabs_logo.png"
                   alt="STEAMLabs International"
-                  width={120}
-                  height={30}
-                  className="object-contain"
-                  style={{ filter: "brightness(0) invert(1)" }}
+                  width={640}
+                  height={181}
+                  className="h-[30px] w-auto object-contain"
+                  style={{ filter: "brightness(0) invert(1)", width: "auto" }}
                 />
               </a>
             </div>
@@ -119,7 +119,7 @@ export default function ShopPage() {
                   style={{ background: "#ede9fe", color: "#3d2f6b" }}
                 >
                   <p>
-                    Came from SD county fair? Use code{" "}
+                    Met us at the San Diego County Fair? Use code{" "}
                     <span className="font-bold tracking-wide" style={{ color: "#7c3aed" }}>
                       COUNTYFAIR
                     </span>{" "}

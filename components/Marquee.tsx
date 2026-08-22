@@ -1,12 +1,12 @@
 const items = [
-  "Transforming Cancer Education",
+  "Cancer Biology Through Play",
   "Strategic Gameplay",
-  "Science Made Fun",
-  "Nonprofit Initiative",
-  "Classroom-Ready",
+  "Built for Classrooms",
   "Ages 8+",
-  "Evidence-Based Learning",
-  "Student Empowerment",
+  "2–4 Players",
+  "45–60 Minutes",
+  "No Biology Background Needed",
+  "Student-Led Nonprofit",
 ];
 
 export default function Marquee() {

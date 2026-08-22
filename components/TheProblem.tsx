@@ -22,15 +22,15 @@ const stats = [
 const insights = [
   {
     heading: "Students are already affected",
-    body: "More than half of K–12 students personally know someone with cancer. They're not too young for this topic — they're already living it.",
+    body: "More than half of K–12 students personally know someone with cancer. The questions are already part of their lives.",
   },
   {
     heading: "Curiosity is the missing ingredient",
-    body: "When students understand what cancer actually is — at a cellular level — fear turns into curiosity. Curiosity turns into engagement. Engagement turns into advocates.",
+    body: "Learning what cancer does at the cellular level gives students something concrete to work with. The subject becomes easier to explore and talk about.",
   },
   {
     heading: "Tumor Tactics bridges the gap",
-    body: "By turning oncology into strategic gameplay, we give students a way to learn that's active, social, and genuinely fun — without sacrificing scientific accuracy.",
+    body: "Tumor Tactics teaches oncology through decisions students make together. The game stays active and fun without watering down the science.",
   },
 ];
 
@@ -55,8 +55,8 @@ export default function TheProblem() {
             <span className="text-[#c4b5fd]">We&rsquo;re Solving</span>
           </h1>
           <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Cancer touches nearly every family in America — yet almost nothing in our
-            school curriculum prepares young people to understand it. That gap has consequences.
+            Cancer touches nearly every family in America, but most students learn
+            almost nothing about it in school.
           </p>
         </div>
       </section>
@@ -113,13 +113,13 @@ export default function TheProblem() {
                 className="text-3xl sm:text-4xl font-black text-[#1e1b2e] mb-6"
                 style={{ letterSpacing: "-0.03em" }}
               >
-                When it is taught,<br />it&rsquo;s through boring textbooks
+                When cancer is taught,<br />it rarely feels connected to real life
               </h2>
               <div className="space-y-4 text-[#3d2f6b] text-sm leading-relaxed">
                 <p>
-                  The rare classroom that covers cancer at all typically does so through dense
-                  reading passages and vocabulary lists — passive learning that doesn&rsquo;t stick
-                  and doesn&rsquo;t engage.
+                  The few classrooms that cover cancer often rely on dense reading passages and
+                  vocabulary lists. Students memorize terms without seeing how the biology and
+                  treatment decisions fit together.
                 </p>
                 <p>
                   Students who lose a family member to cancer often carry that experience into
@@ -127,9 +127,8 @@ export default function TheProblem() {
                   process it through learning.
                 </p>
                 <p>
-                  Meanwhile, cancer biology has never been more accessible or more relevant.
-                  The scientific community understands it in extraordinary detail. Students
-                  deserve that knowledge — in a form they can actually engage with.
+                  Cancer biology is detailed, relevant, and teachable. Students deserve access
+                  to that science in a form they can work with.
                 </p>
               </div>
             </div>
@@ -156,11 +155,10 @@ export default function TheProblem() {
             className="text-3xl sm:text-4xl font-black text-[#1e1b2e] mb-4"
             style={{ letterSpacing: "-0.03em" }}
           >
-            Ready to be part of the solution?
+            Bring Tumor Tactics to More Students
           </h2>
           <p className="text-[#3d2f6b] text-sm mb-8 max-w-xl mx-auto leading-relaxed">
-            Bring Tumor Tactics to your classroom, donate to expand our reach, or partner
-            with us to close the cancer education gap — one game at a time.
+            Use the game in your classroom or work with us to help another school get a kit.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link

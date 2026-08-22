@@ -10,20 +10,21 @@ export default function Footer() {
           <Image
             src="/assets/top_left_logo-removebg-preview.png"
             alt="Tumor Tactics"
-            width={120}
-            height={36}
+            width={268}
+            height={41}
             className="h-8 w-auto"
+            style={{ width: "auto" }}
           />
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-          {["/the-problem", "/#story", "/how-to-play", "/get-involved"].map((href, i) => (
+          {["/the-problem", "/our-story", "/impact-and-recognition", "/get-involved"].map((href, i) => (
             <a
               key={href}
               href={href}
               className="text-xs text-white/60 hover:text-white/90 transition-colors font-medium"
             >
-              {["The Problem", "Our Story", "The Game", "Get Involved"][i]}
+              {["The Problem", "Our Story", "Impact & Recognition", "Get Involved"][i]}
             </a>
           ))}
         </div>

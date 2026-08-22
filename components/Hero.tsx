@@ -34,18 +34,17 @@ export default function Hero() {
               <Image
                 src="/assets/steamlabs_logo.png"
                 alt="STEAMLabs International"
-                width={140}
-                height={36}
-                className="object-contain"
-                style={{ filter: "brightness(0) invert(1)" }}
+                width={640}
+                height={181}
+                className="h-9 w-auto object-contain"
+                style={{ filter: "brightness(0) invert(1)", width: "auto" }}
               />
             </a>
           </div>
 
           <p className="text-sm text-white/65 leading-relaxed mb-10 max-w-sm">
-            A nonprofit educational initiative that brings cancer biology to life
-            through strategic, interactive gameplay — empowering students to
-            understand one of the world&apos;s most complex diseases.
+            Tumor Tactics turns cancer biology into a strategy game that students
+            can pick up, play, and understand.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -73,7 +72,8 @@ export default function Hero() {
           alt="Students playing Tumor Tactics in a classroom"
           fill
           className="object-cover"
-          priority
+          loading="eager"
+          fetchPriority="high"
           sizes="50vw"
         />
       </div>

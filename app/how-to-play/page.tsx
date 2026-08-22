@@ -232,18 +232,16 @@ export default function HowToPlayPage() {
         {/* Section 6 — CTAs */}
         <section className="py-20 bg-[#ede9fe] border-t border-[#b4a4f0]">
           <div className="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://drive.google.com/file/d/1U7TyNuv27NjsQPOuZaB23LRqlKlTb3HB/view?usp=sharing"
-              target="_blank"
-              download
+            <Link
+              href="/game"
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-white transition-[opacity,transform] hover:opacity-90 active:translate-y-px shadow-md"
               style={{ background: "#1e1b2e" }}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              Download free rulebook PDF
-            </a>
+              Free Download
+            </Link>
             <Link
               href="/shop"
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-white transition-[opacity,transform] hover:opacity-90 active:translate-y-px shadow-md"

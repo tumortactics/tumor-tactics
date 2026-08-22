@@ -90,7 +90,7 @@ function AwardItem({ award }: { award: Award }) {
           alt={award.alt}
           width={180}
           height={110}
-          className="h-full w-auto object-contain max-w-[180px]"
+          className="h-[110px] w-[180px] object-contain"
           loading="lazy"
         />
       </div>
@@ -118,7 +118,7 @@ export default function Awards() {
   return (
     <section className="py-24 bg-white border-t border-[#b4a4f0]">
       <div className="max-w-6xl mx-auto px-6 mb-12">
-        <div className="flex items-end justify-between gap-4">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
           <h2
             className="text-4xl sm:text-5xl font-bold text-[#1e1b2e] leading-none"
             style={{ letterSpacing: "-0.03em" }}

@@ -1,18 +1,20 @@
 const options = [
   {
+    id: "partner",
     title: "Partner With Us",
     description:
-      "Organizations and institutions can collaborate with Tumor Tactics to bring cancer education to more classrooms. We welcome partnerships with schools, hospitals, nonprofits, and research institutions.",
+      "Schools, hospitals, nonprofits, and research institutions can work with us to bring cancer education to more classrooms.",
     cta: "Become a Partner",
-    href: "mailto:playtumortactics@gmail.com?subject=I%20would%20like%20join%20the%20team!",
+    href: "mailto:playtumortactics@gmail.com?subject=Partnership%20Inquiry",
     accent: "#7c3aed",
     accentText: "#fff",
     note: null as string | null,
   },
   {
+    id: "free-kit",
     title: "Bring the Game to Your School",
     description:
-      "Educators can request a Tumor Tactics classroom kit. We provide game materials, educator guides, and lesson plans aligned with science standards for ages 8+.",
+      "Educators can request a classroom kit with game materials, educator guides, and lesson plans aligned with science standards for ages 8+.",
     cta: "Request a Kit",
     href: "mailto:playtumortactics@gmail.com?subject=Game%20Kit%20Request",
     accent: "#1e1b2e",
@@ -20,14 +22,15 @@ const options = [
     note: null as string | null,
   },
   {
+    id: "join-team",
     title: "Join the Tumor Tactics Team",
     description:
-      "We're always looking for passionate students to help run events, demo the game at schools and fairs, and spread cancer education in their communities. No experience needed, just curiosity and drive.",
-    cta: "Email Us With This Info",
+      "Students can help run events, demo the game at schools and fairs, and share cancer education in their communities. No experience is required.",
+    cta: "Join the Team",
     href: "mailto:playtumortactics@gmail.com",
     accent: "#a855f7",
     accentText: "#fff",
-    note: "Include your name, school and grade, and a sentence or two about why you want to get involved.",
+    note: "Include your name, school, grade, and a sentence or two about why you want to get involved.",
   },
 ];
 
@@ -40,14 +43,14 @@ export default function GetInvolved() {
             Get Involved
           </p>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <h2
+            <h1
               className="text-4xl sm:text-5xl font-black text-[#1e1b2e] leading-none"
               style={{ letterSpacing: "-0.03em" }}
             >
-              Join the<br />Movement
-            </h2>
+              Help Us Reach<br />More Students
+            </h1>
             <p className="text-[#3d2f6b] text-sm max-w-xs leading-relaxed">
-              A few ways to support our mission to make cancer education accessible and impactful.
+              Choose how you&apos;d like to help more students learn the science behind cancer.
             </p>
           </div>
         </div>
@@ -56,7 +59,8 @@ export default function GetInvolved() {
           {options.map((opt) => (
             <div
               key={opt.title}
-              className="rounded-2xl border border-[#b4a4f0] p-7 flex flex-col hover:border-[#c4b5fd] hover:shadow-md hover:shadow-purple-100 transition-[border-color,box-shadow] duration-200 group bg-[#ede9fe]"
+              id={opt.id}
+              className="scroll-mt-24 rounded-2xl border border-[#b4a4f0] p-7 flex flex-col hover:border-[#c4b5fd] hover:shadow-md hover:shadow-purple-100 transition-[border-color,box-shadow] duration-200 group bg-[#ede9fe]"
             >
               <div
                 className="w-8 h-1 rounded-full mb-6 transition-[width] duration-300 group-hover:w-12"

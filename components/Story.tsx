@@ -45,7 +45,7 @@ export default function Story() {
 
             <div className="mt-8">
               <Link
-                href="/founding-story"
+                href="/our-story"
                 className="text-sm font-semibold text-[#7c3aed] underline underline-offset-2 hover:text-[#5b21b6] transition-colors"
               >
                 Read our full story →

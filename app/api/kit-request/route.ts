@@ -15,7 +15,6 @@ export async function POST(req: NextRequest) {
       cityState,
       kitsRequested,
       usagePlan,
-      hearAboutUs,
     } = body;
 
     if (!fullName || !email || !schoolName || !role || !schoolType || !cityState || !kitsRequested || !usagePlan) {
