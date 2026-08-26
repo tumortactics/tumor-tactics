@@ -139,13 +139,13 @@ export default function TeamSection() {
           <p className="mb-5 text-[11px] font-bold uppercase tracking-widest text-[#c4b5fd]">
             The People Behind the Mission
           </p>
-          <h2
+          <h1
             id="our-team-heading"
             className="mb-5 text-5xl font-black leading-none text-white sm:text-6xl"
             style={{ letterSpacing: "-0.03em" }}
           >
             Meet Our Team
-          </h2>
+          </h1>
           <p className="mx-auto max-w-sm text-sm leading-relaxed text-white/65">
             Students lead Tumor Tactics, drawing on cancer research, classroom education,
             and community events to make the biology easier to understand.

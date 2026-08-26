@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Our Story | Tumor Tactics",
   description:
-    "Born from loss. Built with purpose. Discover the story behind Tumor Tactics and meet the student-led team making cancer biology accessible.",
+    "Born from loss and built with purpose. Discover the personal story behind Tumor Tactics and its mission to make cancer biology understandable.",
 };
 
 export default function OurStoryPage() {
@@ -111,7 +110,7 @@ export default function OurStoryPage() {
         <section className="border-t border-[#b4a4f0] bg-white py-16">
           <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-6 px-6 sm:flex-row">
             <Link
-              href="#our-team"
+              href="/team"
               className="inline-flex items-center gap-2 rounded-xl bg-[#1e1b2e] px-7 py-3 text-sm font-bold text-white shadow-md transition-[opacity,transform] hover:opacity-90 active:translate-y-px"
             >
               Meet the Team
@@ -127,8 +126,6 @@ export default function OurStoryPage() {
             This story was featured in Matt&apos;s Kindness Ripples On and The Smile Project in 2026.
           </p>
         </section>
-
-        <TeamSection />
       </main>
       <Footer />
     </>

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
+import GameSnapshot from "@/components/GameSnapshot";
 import Story from "@/components/Story";
 import WorkshopGallery from "@/components/WorkshopGallery";
 import PressSection from "@/components/PressSection";
@@ -16,9 +17,10 @@ export default function Home() {
       <main>
         <Hero />
         <Marquee />
+        <GameSnapshot />
+        <PressSection />
         <Story />
         <WorkshopGallery />
-        <PressSection />
         <UpcomingEvents />
         <Awards />
         <NonprofitModel />

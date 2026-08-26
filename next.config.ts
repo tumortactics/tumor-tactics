@@ -14,11 +14,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/team",
-        destination: "/our-story#our-team",
-        permanent: true,
-      },
-      {
         source: "/awards-and-recognition",
         destination: "/impact-and-recognition",
         permanent: true,

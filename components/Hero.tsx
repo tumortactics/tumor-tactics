@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -48,19 +49,19 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <a
-              href="/get-involved"
+            <Link
+              href="/how-to-play"
               className="inline-flex items-center justify-center px-7 py-3.5 font-bold text-sm text-white transition-[opacity] hover:opacity-90 active:translate-y-px"
               style={{ background: "#7c3aed" }}
             >
-              Partner With Us
-            </a>
-            <a
-              href="/get-involved"
+              See How It Works
+            </Link>
+            <Link
+              href="/get-involved#free-kit"
               className="inline-flex items-center justify-center px-7 py-3.5 border border-white/40 text-white text-sm font-bold hover:bg-white/10 hover:border-white/60 transition-[background-color,border-color] active:translate-y-px"
             >
               Bring It to Your School
-            </a>
+            </Link>
           </div>
         </div>
       </div>

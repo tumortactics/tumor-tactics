@@ -32,13 +32,12 @@ const events = [
   {
     title: "UN Science Summit — New York",
     status: "upcoming",
-    date: "September 8, 2026",
-    location: "New York, NY",
+    date: "September 26, 2026 · 10 AM–12 PM PDT",
+    location: "Virtual",
     blurb:
-      'Tumor Tactics will be presented at the United Nations Science Summit in New York. The session, "Tumor Tactics: Teaching Real Oncology in Schools Across the US and Nigeria," is part of the 2026 summit program.',
-    image: "/assets/ScienceSUmmit.jpg",
-    artwork: "summit",
-    link: "https://sciencesummitnyc.org/",
+      '“Youth Can Do It: Closing Gaps in Health, STEM, and Safety” brings together three youth-led nonprofits working across cancer education, STEM access, and disaster preparedness. The free virtual session is open to everyone and includes a live Kahoot and certificates for attendees.',
+    image: "/assets/un-science-summit-2026.png",
+    link: "https://event.sciencesummitnyc.org/list-of-sessions/detail/396",
   },
 ];
 
@@ -65,7 +64,7 @@ export default function UpcomingEvents() {
   const event = upcomingEvents[current];
 
   const btnBase =
-    "absolute top-40 -translate-y-1/2 z-10 w-11 h-11 rounded-full flex items-center justify-center " +
+    "absolute top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full flex items-center justify-center " +
     "bg-white border border-[#b4a4f0] shadow-lg " +
     "text-[#3d2f6b] hover:bg-[#7c3aed] hover:text-white hover:border-[#7c3aed] " +
     "transition-all duration-200 hover:scale-110 active:scale-95 hover:shadow-purple-200/60";
@@ -74,7 +73,7 @@ export default function UpcomingEvents() {
     <section id="events" className="scroll-mt-16 py-24 bg-[#ede9fe] border-t border-[#b4a4f0]">
 
       {/* Header */}
-      <div className="max-w-3xl mx-auto px-6 mb-10">
+      <div className="mx-auto mb-10 max-w-5xl px-6">
         <div className="flex items-end justify-between gap-4">
           <div>
             <p className="text-sm font-bold uppercase tracking-widest mb-4 text-[#7c3aed]">
@@ -102,7 +101,7 @@ export default function UpcomingEvents() {
         px-12 on mobile (48px), px-20 on sm+ (80px).
       */}
       <div
-        className="relative max-w-3xl mx-auto px-12 sm:px-20"
+        className="relative mx-auto max-w-5xl px-12 sm:px-20"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
@@ -120,47 +119,28 @@ export default function UpcomingEvents() {
         )}
 
         {/* Card — overflow-hidden only clips its own image, not the sibling buttons */}
-        <div className="rounded-2xl border border-[#b4a4f0] overflow-hidden bg-white shadow-sm select-none">
+        <div className="grid overflow-hidden rounded-2xl border border-[#b4a4f0] bg-white shadow-sm select-none md:grid-cols-[minmax(260px,0.82fr)_1.18fr]">
           {/* Image */}
           <a
             href={event.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="block relative"
-            style={{ height: 320 }}
+            className="relative block aspect-[987/1280] bg-[#050956] md:aspect-auto md:min-h-[560px]"
             tabIndex={-1}
             aria-hidden="true"
           >
-            {event.artwork === "summit" ? (
-              <div className="relative flex h-full items-center overflow-hidden bg-[#1e1b2e] px-8 sm:px-12">
-                <div className="absolute -right-14 -top-20 h-56 w-56 rounded-full border-[36px] border-[#7c3aed]/30" />
-                <div className="absolute -bottom-16 right-24 h-40 w-40 rounded-full border-[28px] border-[#c4b5fd]/15" />
-                <div className="relative max-w-md text-white">
-                  <p className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-[#c4b5fd]">
-                    New York City
-                  </p>
-                  <p className="text-3xl font-black leading-tight sm:text-5xl">
-                    UN Science Summit
-                  </p>
-                  <p className="mt-5 inline-flex rounded-full border border-white/25 px-3 py-1 text-xs font-bold text-white/85">
-                    September 2026
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <Image
-                src={event.image}
-                alt={event.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) calc(100vw - 96px), calc(min(768px, 100vw) - 160px)"
-                priority
-              />
-            )}
+            <Image
+              src={event.image}
+              alt={`${event.title} session flyer`}
+              fill
+              className="object-contain"
+              sizes="(max-width: 767px) calc(100vw - 96px), 420px"
+              priority
+            />
           </a>
 
           {/* Content */}
-          <div className="p-7 sm:p-8">
+          <div className="flex flex-col justify-center p-7 sm:p-9">
             <div className="flex items-start justify-between gap-3 mb-4">
               <h3 className="text-xl font-bold text-[#1e1b2e] leading-snug">{event.title}</h3>
               <span
@@ -221,7 +201,7 @@ export default function UpcomingEvents() {
 
       {/* Dot indicators */}
       {upcomingEvents.length > 1 && (
-        <div className="max-w-3xl mx-auto px-6 mt-7 flex items-center justify-center gap-2.5">
+        <div className="mx-auto mt-7 flex max-w-5xl items-center justify-center gap-2.5 px-6">
           {upcomingEvents.map((_, i) => (
             <button
               key={i}
