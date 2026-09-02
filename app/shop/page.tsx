@@ -86,7 +86,7 @@ export default function ShopPage() {
                     "2–4 players · Ages 8+",
                     "10% of proceeds support pediatric cancer research through the American Cancer Society",
                     "All other proceeds fund free kits for Title I and underserved schools nationwide",
-                    "Free Shipping!"
+                    "Free local shipping/pickup within San Diego. Shipping charges may apply elsewhere."
                   ].map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <span
