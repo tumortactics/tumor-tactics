@@ -118,13 +118,7 @@ export default function ShopPage() {
                   className="flex items-start gap-3 rounded-xl px-4 py-3 text-sm"
                   style={{ background: "#ede9fe", color: "#3d2f6b" }}
                 >
-                  <p>
-                    Met us at the San Diego County Fair? Use code{" "}
-                    <span className="font-bold tracking-wide" style={{ color: "#7c3aed" }}>
-                      COUNTYFAIR
-                    </span>{" "}
-                    at checkout for <span className="font-bold">10% off</span>.
-                  </p>
+          
                 </div>
 
                 {/* Square embed */}
