@@ -222,8 +222,8 @@ function CardsGallery() {
 
       <div className="flex flex-col items-center gap-3 mt-8">
         <a
-          href="/assets/FINAL%20Double-Sided%20Print%20Version.pdf"
-          download
+          href="https://drive.google.com/file/d/12y6LeaMp7wqtQm1XlawTGLVCObHb1Ljm/view?usp=sharing"
+          target="_blank"
           className="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-bold text-sm text-white transition-opacity hover:opacity-90"
           style={{ background: "#7c3aed" }}
         >
