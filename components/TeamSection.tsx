@@ -5,6 +5,7 @@ interface LeaderMember {
   role: string;
   bio: string;
   image?: string;
+  imagePosition?: string;
   featured?: boolean;
   open?: boolean;
 }
@@ -44,6 +45,13 @@ const leadership: LeaderMember[] = [
     name: "Justin Sun",
     role: "Director of Education Initiatives",
     image: "/assets/justin_sun.jpg",
+    imagePosition: "center bottom",
+    bio: "",
+  },
+  {
+    name: "Naiya Prajapati",
+    role: "Chief Marketing Officer",
+    image: "/assets/naiya-prajapati.png",
     bio: "",
   },
 ];
@@ -51,10 +59,12 @@ const leadership: LeaderMember[] = [
 function Avatar({
   name,
   src,
+  position = "center top",
   open,
 }: {
   name: string;
   src?: string;
+  position?: string;
   open?: boolean;
 }) {
   const size = 200;
@@ -62,14 +72,14 @@ function Avatar({
   if (src) {
     return (
       <div
-        className="relative mx-auto shrink-0 overflow-hidden rounded-full border-2 border-[#b4a4f0]"
-        style={{ width: size, height: size }}
+        className="relative mx-auto aspect-square w-full max-w-[200px] shrink-0 overflow-hidden rounded-full border-2 border-[#b4a4f0]"
       >
         <Image
           src={src}
           alt={name}
           fill
-          className="object-cover object-top"
+          className="object-cover"
+          style={{ objectPosition: position }}
           sizes={`${size}px`}
         />
       </div>
@@ -78,10 +88,9 @@ function Avatar({
 
   return (
     <div
-      className={`mx-auto flex shrink-0 items-end justify-center overflow-hidden rounded-full border-2 border-[#b4a4f0] bg-[#ede9fe] ${
+      className={`mx-auto flex aspect-square w-full max-w-[200px] shrink-0 items-end justify-center overflow-hidden rounded-full border-2 border-[#b4a4f0] bg-[#ede9fe] ${
         open ? "border-dashed" : ""
       }`}
-      style={{ width: size, height: size }}
       aria-label={`Photo placeholder for ${name}`}
     >
       <svg viewBox="0 0 88 88" width={173} height={173} fill="none" aria-hidden="true">
@@ -105,7 +114,7 @@ function LeaderCard({ member }: { member: LeaderMember }) {
         background: member.open ? "#fafafa" : "white",
       }}
     >
-      <Avatar name={member.name} src={member.image} open={member.open} />
+      <Avatar name={member.name} src={member.image} position={member.imagePosition} open={member.open} />
 
       <div className="mt-5 mb-4 w-full">
         {member.open ? (
@@ -162,9 +171,11 @@ export default function TeamSection() {
             <div className="h-px bg-[#b4a4f0]" />
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {leadership.map((member) => (
-              <LeaderCard key={member.name} member={member} />
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-8">
+            {leadership.map((member, index) => (
+              <div key={member.name} className={index === 4 ? "lg:col-span-2 lg:col-start-2" : "lg:col-span-2"}>
+                <LeaderCard member={member} />
+              </div>
             ))}
           </div>
         </div>

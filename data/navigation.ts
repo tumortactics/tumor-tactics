@@ -29,6 +29,6 @@ export const directItems: NavigationItem[] = [
 
 export const footerGroups = [
   { label: "About", links: [...navigationGroups[0].items, directItems[0]] },
-  { label: "The Game", links: [...navigationGroups[1].items, { label: "Preorder the Kit", href: "/shop" }] },
+  { label: "The Game", links: [...navigationGroups[1].items, { label: "Shop the Kit", href: "/shop" }] },
   { label: "Explore", links: [directItems[1], { label: "Classroom Gallery", href: "/gallery" }, directItems[2], { label: "Contact Us", href: "/contact" }] },
 ];

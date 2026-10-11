@@ -7,9 +7,9 @@ import ProductGallery from "@/components/ProductGallery";
 import BuyButton from "@/components/BuyButton";
 
 export const metadata: Metadata = {
-  title: "Preorder the Kit | Tumor Tactics",
+  title: "Shop the Kit | Tumor Tactics",
   description:
-    "Preorder your Tumor Tactics kit for $17.99. Currently out of stock; restocking is expected within a few months. Kits ship after restock. Shipping charges may apply.",
+    "Buy your Tumor Tactics kit for $17.99. Each kit includes a full card deck and printed two-sided rulebook. Shipping charges may apply.",
 };
 
 export default function ShopPage() {
@@ -28,10 +28,10 @@ export default function ShopPage() {
               className="text-5xl sm:text-6xl font-black text-white mb-6 leading-tight"
               style={{ letterSpacing: "-0.03em" }}
             >
-              Preorder Your Tumor Tactics Kit
+              Get Your Tumor Tactics Kit
             </h1>
             <p className="text-lg text-white/85 leading-relaxed">
-              Out of stock, with restocking expected within a few months. Each $17.99 kit includes a full card deck and a printed two-sided rulebook.
+              Each $17.99 kit includes a full card deck and a printed two-sided rulebook. Bring cancer biology to life through play.
             </p>
             <div className="flex items-center justify-center gap-2 mt-6">
               <span className="text-sm text-white/55 font-medium uppercase tracking-widest">A project by</span>
@@ -117,7 +117,7 @@ export default function ShopPage() {
                 <BuyButton />
 
                 <p className="text-sm leading-relaxed text-[#3d2f6b]">
-                  Want to play while you wait? <Link href="/game" className="font-semibold text-[#7c3aed] underline underline-offset-4">Download the free print-and-play game</Link> or <Link href="/how-to-play" className="font-semibold text-[#7c3aed] underline underline-offset-4">learn how to play</Link>.
+                  Prefer to print your own? <Link href="/game" className="font-semibold text-[#7c3aed] underline underline-offset-4">Download the free print-and-play game</Link> or <Link href="/how-to-play" className="font-semibold text-[#7c3aed] underline underline-offset-4">learn how to play</Link>.
                 </p>
 
                 <p className="text-xs" style={{ color: "#6b5f8e" }}>

@@ -54,7 +54,7 @@ export default function GameSnapshot() {
               href="/shop"
               className="border border-[#7c3aed] px-6 py-3 text-sm font-bold text-[#6d28d9] transition-colors hover:bg-[#ede9fe]"
             >
-              Preorder the Kit
+              Shop the Kit
             </Link>
           </div>
           <Link

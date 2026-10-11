@@ -1,8 +1,8 @@
 const stats = [
-  { number: "10+", label: "Schools Impacted", description: "Partner schools across the country" },
-  { number: "$5k+", label: "Raised", description: "Funding kits, outreach & educator resources" },
-  { number: "1,500+", label: "Students Reached", description: "Across workshops and presentations" },
-  { number: "Growing", label: "National Outreach", description: "Expanding to new regions and communities" },
+  { number: "50+", label: "Community Partners", description: "Schools, hospitals, and nonprofit organizations" },
+  { number: "$3,600", label: "Raised", description: "Funding kits, outreach & educator resources" },
+  { number: "10,000", label: "Students Reached", description: "Across workshops and presentations" },
+  { number: "50", label: "States Reached", description: "Decks distributed to all 50 states" },
 ];
 
 export default function Impact() {

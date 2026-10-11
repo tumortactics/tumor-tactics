@@ -251,7 +251,7 @@ export default function HowToPlayPage() {
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-white transition-[opacity,transform] hover:opacity-90 active:translate-y-px shadow-md"
               style={{ background: "#7c3aed" }}
             >
-              Preorder the full kit — $17.99
+              Buy the full kit — $17.99
             </Link>
           </div>
         </section>

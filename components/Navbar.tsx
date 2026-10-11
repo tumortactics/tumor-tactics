@@ -159,7 +159,7 @@ export default function Navbar() {
               isActive("/shop") ? "bg-[#1e1b2e]" : "bg-[#7c3aed] hover:bg-[#5b21b6]"
             }`}
           >
-            Preorder the Kit
+            Get the Game
           </Link>
         </div>
 
@@ -232,7 +232,7 @@ export default function Navbar() {
               className="bg-[#7c3aed] px-5 py-3.5 text-center text-sm font-bold text-white"
               onClick={() => setIsOpen(false)}
             >
-              Preorder the Kit
+              Get the Game
             </Link>
           </div>
         </div>

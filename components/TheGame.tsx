@@ -350,7 +350,7 @@ export default function TheGame() {
       <div style={{ background: "#2a1a5e", borderBottom: "1px solid #4a2fa0" }}>
         <div className="max-w-6xl mx-auto px-6 py-5">
           <p className="text-white/90 text-sm text-center leading-relaxed">
-            <span className="font-bold text-[#c4b5fd]">Physical kits are out of stock and expected to restock within a few months. <a href="/shop" className="underline">Preorder the full kit for $17.99</a>.</span>
+            <span className="font-bold text-[#c4b5fd]">Get the full kit with all materials. <a href="/shop" className="underline">Buy the kit for $17.99</a>.</span>
             <br></br>For bulk orders, educator inquiries, or classroom partnership requests,
             please reach out directly at{" "}
             <a href="mailto:playtumortactics@gmail.com" className="font-semibold text-white underline">playtumortactics@gmail.com</a>{" "}
