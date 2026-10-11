@@ -30,9 +30,9 @@ const leadership: LeaderMember[] = [
     bio: "",
   },
   {
-    name: "Felix Yang",
+    name: "Naiya Prajapati",
     role: "Chief Marketing Officer",
-    image: "/assets/felix_yang.png",
+    image: "/assets/naiya-prajapati.png",
     bio: "",
   },
   {
@@ -46,12 +46,6 @@ const leadership: LeaderMember[] = [
     role: "Director of Education Initiatives",
     image: "/assets/justin_sun.jpg",
     imagePosition: "center bottom",
-    bio: "",
-  },
-  {
-    name: "Naiya Prajapati",
-    role: "Chief Marketing Officer",
-    image: "/assets/naiya-prajapati.png",
     bio: "",
   },
 ];
@@ -173,7 +167,7 @@ export default function TeamSection() {
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-8">
             {leadership.map((member, index) => (
-              <div key={member.name} className={index === 4 ? "lg:col-span-2 lg:col-start-2" : "lg:col-span-2"}>
+              <div key={member.name} className={index === 4 ? "lg:col-span-2 lg:col-start-3" : "lg:col-span-2"}>
                 <LeaderCard member={member} />
               </div>
             ))}
