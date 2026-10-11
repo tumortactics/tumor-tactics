@@ -1,166 +1,42 @@
-"use client";
-
-import { useState } from "react";
+import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-interface FormState {
-  fullName: string;
-  email: string;
-  message: string;
-}
-
-function ContactForm() {
-  const [form, setForm] = useState<FormState>({ fullName: "", email: "", message: "" });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
-
-  const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-[#b4a4f0] text-[#1e1b2e] text-sm placeholder:text-[#9585b8] bg-[#f5f3ff] cursor-not-allowed opacity-60 focus:outline-none transition-[box-shadow,border-color]";
-
-  return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-4">
-      <div>
-        <label htmlFor="fullName" className="sr-only">Full Name</label>
-        <input
-          id="fullName"
-          name="fullName"
-          type="text"
-          disabled
-          autoComplete="name"
-          value={form.fullName}
-          onChange={handleChange}
-          className={inputClass}
-          placeholder="Full Name"
-        />
-      </div>
-
-      <div>
-        <label htmlFor="email" className="sr-only">Email</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          disabled
-          autoComplete="email"
-          value={form.email}
-          onChange={handleChange}
-          className={inputClass}
-          placeholder="Email"
-        />
-      </div>
-
-      <div>
-        <label htmlFor="message" className="sr-only">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          disabled
-          rows={6}
-          value={form.message}
-          onChange={handleChange}
-          className={inputClass}
-          placeholder="Message"
-          style={{ resize: "none", minHeight: 144 }}
-        />
-      </div>
-
-
-      <div className="pt-3 pb-1 space-y-2 text-center">
-        <p className="text-xs text-[#6b5f8e] leading-relaxed">
-          You may receive marketing and promotional materials. Contact the merchant for their privacy practices.
-        </p>
-        <p className="text-[10px] leading-relaxed text-[#6b5f8e]">
-          This form is protected by reCAPTCHA and the Google{" "}
-          <a
-            href="https://policies.google.com/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-[#7c3aed] transition-colors"
-          >
-            Privacy Policy
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://policies.google.com/terms"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-[#7c3aed] transition-colors"
-          >
-            Terms of Service
-          </a>{" "}
-          apply.
-        </p>
-      </div>
-
-      <div className="flex justify-center pt-1">
-        <button
-          type="submit"
-          disabled
-          className="px-14 py-3.5 font-bold text-sm rounded-xl text-white cursor-not-allowed opacity-40"
-          style={{ background: "#7c3aed" }}
-          title="Form is currently unavailable"
-        >
-          Submit
-        </button>
-      </div>
-    </form>
-  );
-}
+export const metadata: Metadata = {
+  title: "Contact Us | Tumor Tactics",
+  description: "Email Tumor Tactics about classroom kits, workshops, bulk orders, partnerships, or volunteering.",
+};
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-[calc(100vh-4rem)] bg-[#f8f5ff]">
-        <section className="py-24">
-          <div className="max-w-xl mx-auto px-6">
-
-            {/* Header */}
-            <div className="text-center mb-10">
-              <h1
-                className="text-5xl sm:text-6xl font-black text-[#1e1b2e] mb-6 leading-none"
-                style={{ letterSpacing: "-0.03em" }}
-              >
-                Contact Us
-              </h1>
-              <p className="text-sm text-[#3d2f6b] leading-relaxed mb-3 max-w-md mx-auto">
-                Reach out to us and let us know if there is anything we can do for you.
+      <main className="min-h-[calc(100vh-4.5rem)] bg-[#f8f5ff]">
+        <section className="py-20 sm:py-24">
+          <div className="mx-auto max-w-2xl px-6">
+            <h1 className="text-5xl font-black leading-tight tracking-[-0.03em] text-[#1e1b2e] sm:text-6xl">
+              Contact Us
+            </h1>
+            <p className="mt-6 text-base leading-relaxed text-[#3d2f6b]">
+              Have a question about the game, a classroom kit, or a partnership?
+              Email our team and tell us how we can help.
+            </p>
+            <a href="mailto:playtumortactics@gmail.com" className="mt-8 inline-flex min-h-12 items-center justify-center rounded-xl bg-[#7c3aed] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-[#5b21b6]">
+              Email Tumor Tactics
+            </a>
+            <p className="mt-3 break-words text-sm text-[#6b5f8e]">playtumortactics@gmail.com</p>
+            <div className="mt-12 border-t border-[#b4a4f0] pt-8">
+              <h2 className="text-2xl font-bold text-[#1e1b2e]">For educators</h2>
+              <p className="mt-3 text-sm leading-relaxed text-[#3d2f6b]">
+                Ask about a bulk order quotation or a guided activity at your school.
+                Guided activities are currently available in the San Diego area.
               </p>
-              <p className="text-sm text-[#3d2f6b] leading-relaxed max-w-md mx-auto">
-                If you are an educator, reach out here to receive a quotation for a bulk purchase
-                order or to book a guided activity session with us at your school*.
-              </p>
-              <p className="text-xs text-[#3d2f6b] mt-4">
-                *Guided activities are currently only available in the San Diego area.
-              </p>
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
+                <Link href="/get-involved#free-kit" className="inline-flex min-h-11 items-center font-semibold text-[#7c3aed] underline underline-offset-4">Request a classroom kit</Link>
+                <Link href="/game" className="inline-flex min-h-11 items-center font-semibold text-[#7c3aed] underline underline-offset-4">Download the free game</Link>
+              </div>
             </div>
-
-            {/* Disclaimer */}
-            <div
-              className="rounded-xl px-5 py-4 mb-8 text-sm leading-relaxed text-center"
-              style={{ background: "#fef9e7", border: "1px solid #f0c040", color: "#7a5c00" }}
-              role="note"
-            >
-              <span className="font-bold">Note:</span> The contact form is currently not functional.
-              To reach us directly, email{" "}
-              <a
-                href="mailto:playtumortactics@gmail.com"
-                className="font-bold underline underline-offset-2 hover:opacity-80 transition-opacity"
-              >
-                playtumortactics@gmail.com
-              </a>
-              .
-            </div>
-
-            <ContactForm />
-
           </div>
         </section>
       </main>

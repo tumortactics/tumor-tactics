@@ -156,9 +156,9 @@ export default function TeamSection() {
       <div className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-10">
-            <h3 className="mb-3 text-[11px] font-bold uppercase tracking-widest text-[#3d2f6b]">
+            <h2 className="mb-3 text-[11px] font-bold uppercase tracking-widest text-[#3d2f6b]">
               Leadership
-            </h3>
+            </h2>
             <div className="h-px bg-[#b4a4f0]" />
           </div>
 
@@ -170,22 +170,6 @@ export default function TeamSection() {
         </div>
       </div>
 
-      <div className="border-t border-[#b4a4f0] bg-[#ede9fe] py-12">
-        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-6 px-6 sm:flex-row sm:items-center">
-          <div>
-            <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-[#7c3aed]">Join Us</p>
-            <p className="text-xl font-black leading-snug tracking-[-0.02em] text-[#1e1b2e]">
-              Interested in being part of the mission?
-            </p>
-          </div>
-          <a
-            href="mailto:playtumortactics@gmail.com?subject=Team%20Inquiry"
-            className="inline-flex shrink-0 items-center justify-center rounded-xl bg-[#7c3aed] px-7 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </div>
     </section>
   );
 }

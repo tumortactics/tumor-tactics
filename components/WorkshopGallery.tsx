@@ -20,7 +20,9 @@ export default function WorkshopGallery() {
         >
           Tumor Tactics in the Wild
         </h2>
-        
+        <Link href="/gallery" className="inline-flex min-h-11 shrink-0 items-center text-sm font-semibold text-[#6d28d9] underline underline-offset-4 hover:text-[#5b21b6]">
+          View all photos
+        </Link>
       </div>
 
       <div className="relative">

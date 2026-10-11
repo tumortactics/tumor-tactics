@@ -1,5 +1,15 @@
 # Tumor Tactics Site Reorganization Plan
 
+## October 2, 2026 requested updates
+
+- [MODIFY] `data/pressFeatures.ts`: include all 18 supplied features; explicitly select Union-Tribune, Nice News, and ASCB for the homepage. Keep unconfirmed dates empty.
+- [MODIFY] `components/PressSection.tsx`: preserve the editorial layout, render only the selected homepage stories, and link to the complete archive.
+- [MODIFY] `components/Awards.tsx`, `app/impact-and-recognition/page.tsx`, `app/globals.css`: add the supplied Serious Play badge and official link; show static logos on Impact and retain an accessible homepage carousel.
+- [NEW] `public/assets/awards/serious-play-2026.png`: official K12 Tabletop Winner badge matching the screenshot.
+- [MODIFY] `app/how-to-play/page.tsx`, `components/Impact.tsx`, `app/shop/page.tsx`: correct the cancer-card thumbnail, show 1,500+ students across workshops/presentations, and align shipping text and metadata.
+- [NEW] `docs/press-research.md`, `scripts/check-content.mjs`: record verification evidence and keep a runnable content regression check.
+- Verify lint, production build, content check, and desktop/mobile renders of all changed surfaces. This work is authorized by the current request to implement all supplied changes.
+
 ## Goal
 
 Make the site easier to follow from mission to game to proof to participation, give the media features editorial weight, update the UN Science Summit session accurately, and move the team onto its own page.
@@ -100,3 +110,13 @@ The homepage will read in this order:
 
 - Existing product pricing, donation claims, event history, award claims, and team roster will not be rewritten unless required for the requested layout.
 - Legacy redirects (`/about`, `/founding-story`, `/awards-and-recognition`) will remain intact.
+
+## October 10, 2026: page journeys and preorders
+
+1. Review every public route and its content components. Keep the existing design, story, team roster, press archive, and legacy URLs.
+2. Add shared navigation data, a direct Meet Our Team tab, keyboard dismissal, and contextual onward links. Bring free downloads to the top of their page and make Contact lead to the working email action.
+3. Replace physical-kit purchase copy with out-of-stock/preorder wording and the existing $17.99 Square payment link. Explain that restocking is expected within a few months and offer immediate print-and-play.
+4. Update the authorized Square payment-link description to disclose preorder fulfillment timing while preserving existing shipping terms and price.
+5. Run lint, build, route/link checks, and one desktop/mobile inspection round. Record the navigation and checkout changes.
+
+The user chose paid Square preorders instead of an email waitlist. No mailing-list backend is added; the existing Resend setting is a placeholder, and the kit-request API currently does not persist requests.

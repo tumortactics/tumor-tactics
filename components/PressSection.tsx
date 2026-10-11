@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { pressFeatures, type PressFeature } from "@/data/pressFeatures";
+import Link from "next/link";
+import { homepageFeatures, pressFeatures, type PressFeature } from "@/data/pressFeatures";
 
 type PressSectionProps = {
   variant?: "home" | "archive";
@@ -25,13 +26,13 @@ function StoryMeta({ story, light = false }: { story: PressFeature; light?: bool
         light ? "text-[#c4b5fd]" : "text-[#7c3aed]"
       }`}
     >
-      {story.source} <span aria-hidden="true">·</span> {story.published}
+      {story.source}{story.published && <> <span aria-hidden="true">·</span> {story.published}</>}
     </p>
   );
 }
 
 function HomePress() {
-  const [lead, ...supporting] = pressFeatures;
+  const [lead, ...supporting] = homepageFeatures;
 
   return (
     <section className="border-t border-[#b4a4f0] bg-white py-20 sm:py-24" aria-labelledby="press-heading">
@@ -50,7 +51,7 @@ function HomePress() {
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-[#3d2f6b]">
-            Independent features on how Tumor Tactics grew from a personal question into a student-led educational mission.
+            Coverage and stories on how Tumor Tactics grew from a personal question into a student-led educational mission.
           </p>
         </div>
 
@@ -67,7 +68,7 @@ function HomePress() {
                   src={lead.image}
                   alt={lead.imageAlt}
                   fill
-                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.025]"
+                  className="object-cover transition-transform duration-500 ease-out motion-reduce:transition-none motion-safe:group-hover:scale-[1.025]"
                   sizes="(max-width: 1024px) 100vw, 58vw"
                 />
               </div>
@@ -83,7 +84,7 @@ function HomePress() {
                 </div>
                 <p className="max-w-[62ch] text-sm leading-7 text-white/75">{lead.description}</p>
                 <span className="inline-flex items-center gap-2 text-sm font-bold text-[#c4b5fd]">
-                  Read on BoardGameGeek <ExternalArrow />
+                  Read on {lead.source} <ExternalArrow />
                 </span>
               </div>
             </a>
@@ -96,14 +97,14 @@ function HomePress() {
                   href={story.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group grid gap-5 py-7 sm:grid-cols-[132px_1fr] lg:grid-cols-1 xl:grid-cols-[132px_1fr]"
+                  className="group grid gap-5 py-7 sm:grid-cols-[132px_1fr]"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-[#ede9fe] lg:aspect-[16/9] xl:aspect-[4/3]">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-[#ede9fe]">
                     <Image
                       src={story.image}
                       alt={story.imageAlt}
                       fill
-                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
+                      className="object-cover transition-transform duration-500 ease-out motion-reduce:transition-none motion-safe:group-hover:scale-[1.035]"
                       sizes="(max-width: 640px) 100vw, 180px"
                     />
                   </div>
@@ -122,6 +123,9 @@ function HomePress() {
             ))}
           </div>
         </div>
+        <Link href="/impact-and-recognition#media-features-heading" className="mt-10 inline-flex min-h-11 items-center gap-2 text-sm font-bold text-[#6d28d9] underline underline-offset-4 hover:text-[#5b21b6]">
+          Explore all {pressFeatures.length} stories →
+        </Link>
       </div>
     </section>
   );
@@ -141,38 +145,36 @@ function ArchivePress() {
               className="text-4xl font-black leading-none text-[#1e1b2e] sm:text-5xl"
               style={{ letterSpacing: "-0.035em" }}
             >
-              Featured stories
+              All stories &amp; features
             </h2>
           </div>
           <p className="max-w-xs text-sm leading-relaxed text-[#3d2f6b]">
-            Coverage of the people, purpose, and design choices behind Tumor Tactics.
+            {pressFeatures.length} news features, interviews, outreach reports, and recognitions from across the Tumor Tactics story.
           </p>
         </div>
 
         <div className="border-y border-[#b4a4f0]">
-          {pressFeatures.map((story, index) => (
+          {pressFeatures.map((story) => (
             <article key={story.href} className="border-b border-[#b4a4f0] last:border-b-0">
               <a
                 href={story.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group grid gap-5 py-7 sm:grid-cols-[48px_176px_1fr] sm:items-center lg:grid-cols-[56px_210px_1fr_auto]"
+                className="group grid grid-cols-[80px_minmax(0,1fr)] gap-4 py-7 sm:grid-cols-[144px_minmax(0,1fr)] sm:items-center sm:gap-6 lg:grid-cols-[176px_minmax(0,1fr)_auto]"
               >
-                <span className="text-2xl font-black text-[#c4b5fd]" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#ede9fe]">
                   <Image
                     src={story.image}
                     alt={story.imageAlt}
                     fill
-                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
-                    sizes="210px"
+                    className={`${story.category === "Award recognition" ? "object-contain p-2" : "object-cover"} transition-transform duration-500 ease-out motion-reduce:transition-none motion-safe:group-hover:scale-[1.035]`}
+                    sizes="(max-width: 640px) 80px, (max-width: 1024px) 144px, 176px"
                   />
                 </div>
                 <div className="grid gap-3">
                   <StoryMeta story={story} />
-                  <h3 className="text-2xl font-black leading-tight text-[#1e1b2e] group-hover:text-[#5b21b6]">
+                  <p className="text-xs font-semibold text-[#6b5f8e]">{story.category}</p>
+                  <h3 className="text-lg font-black leading-snug text-[#1e1b2e] group-hover:text-[#5b21b6] sm:text-xl">
                     {story.title}
                   </h3>
                   <p className="max-w-[64ch] text-sm leading-6 text-[#3d2f6b]">{story.description}</p>

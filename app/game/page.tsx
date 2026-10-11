@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import TheGame from "@/components/TheGame";
 import Footer from "@/components/Footer";
+import PageJourney from "@/components/PageJourney";
 
 export const metadata: Metadata = {
   title: "Free Download | Tumor Tactics",
@@ -15,6 +16,7 @@ export default function GamePage() {
       <Navbar />
       <main>
         <TheGame />
+        <PageJourney page="download" />
       </main>
       <Footer />
     </>

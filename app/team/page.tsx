@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import TeamSection from "@/components/TeamSection";
 import Footer from "@/components/Footer";
+import PageJourney from "@/components/PageJourney";
 
 export const metadata: Metadata = {
   title: "Meet Our Team | Tumor Tactics",
@@ -15,6 +16,7 @@ export default function TeamPage() {
       <Navbar />
       <main>
         <TeamSection />
+        <PageJourney page="team" />
       </main>
       <Footer />
     </>

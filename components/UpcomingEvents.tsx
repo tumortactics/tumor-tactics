@@ -31,9 +31,11 @@ const events = [
   },
   {
     title: "UN Science Summit — New York",
-    status: "upcoming",
+    status: "past",
     date: "September 26, 2026 · 10 AM–12 PM PDT",
     location: "Virtual",
+    pastBlurb:
+      'The September 26 session, “Youth Can Do It: Closing Gaps in Health, STEM, and Safety,” brought together youth-led nonprofits working across cancer education, STEM access, and disaster preparedness.',
     blurb:
       '“Youth Can Do It: Closing Gaps in Health, STEM, and Safety” brings together three youth-led nonprofits working across cancer education, STEM access, and disaster preparedness. The free virtual session is open to everyone and includes a live Kahoot and certificates for attendees.',
     image: "/assets/un-science-summit-2026.png",
@@ -43,14 +45,16 @@ const events = [
 
 const upcomingEvents = events.filter((event) => event.status === "upcoming");
 const pastEvents = events.filter((event) => event.status === "past");
+const featuredEvents = upcomingEvents.length > 0 ? upcomingEvents : pastEvents.slice(-1);
+const archivedEvents = pastEvents.filter((event) => !featuredEvents.includes(event));
 
 export default function UpcomingEvents() {
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef(0);
 
   const prev = () =>
-    setCurrent((c) => (c - 1 + upcomingEvents.length) % upcomingEvents.length);
-  const next = () => setCurrent((c) => (c + 1) % upcomingEvents.length);
+    setCurrent((c) => (c - 1 + featuredEvents.length) % featuredEvents.length);
+  const next = () => setCurrent((c) => (c + 1) % featuredEvents.length);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
@@ -61,7 +65,7 @@ export default function UpcomingEvents() {
     else if (diff < -50) prev();
   };
 
-  const event = upcomingEvents[current];
+  const event = featuredEvents[current];
 
   const btnBase =
     "absolute top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full flex items-center justify-center " +
@@ -83,7 +87,7 @@ export default function UpcomingEvents() {
               className="text-4xl sm:text-5xl font-bold text-[#1e1b2e] leading-none"
               style={{ letterSpacing: "-0.03em" }}
             >
-              Upcoming Event
+              {upcomingEvents.length > 0 ? "Upcoming Event" : "Recent Event"}
             </h2>
           </div>
           <Link
@@ -106,7 +110,7 @@ export default function UpcomingEvents() {
         onTouchEnd={handleTouchEnd}
       >
         {/* Prev button — lives in the left padding, outside the card */}
-        {upcomingEvents.length > 1 && (
+        {featuredEvents.length > 1 && (
           <button
             onClick={prev}
             className={`${btnBase} left-2 sm:left-5`}
@@ -168,7 +172,7 @@ export default function UpcomingEvents() {
             </div>
 
             {event.blurb && (
-              <p className="text-sm text-[#3d2f6b] leading-relaxed">{event.blurb}</p>
+            <p className="text-sm text-[#3d2f6b] leading-relaxed">{event.status === "past" ? event.pastBlurb : event.blurb}</p>
             )}
 
             <a
@@ -186,7 +190,7 @@ export default function UpcomingEvents() {
         </div>
 
         {/* Next button — lives in the right padding, outside the card */}
-        {upcomingEvents.length > 1 && (
+        {featuredEvents.length > 1 && (
           <button
             onClick={next}
             className={`${btnBase} right-2 sm:right-5`}
@@ -200,9 +204,9 @@ export default function UpcomingEvents() {
       </div>
 
       {/* Dot indicators */}
-      {upcomingEvents.length > 1 && (
+      {featuredEvents.length > 1 && (
         <div className="mx-auto mt-7 flex max-w-5xl items-center justify-center gap-2.5 px-6">
-          {upcomingEvents.map((_, i) => (
+          {featuredEvents.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
@@ -232,7 +236,7 @@ export default function UpcomingEvents() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          {pastEvents.map((pastEvent) => (
+          {archivedEvents.map((pastEvent) => (
             <article
               key={pastEvent.title}
               className="overflow-hidden rounded-2xl border border-[#b4a4f0] bg-white shadow-sm"

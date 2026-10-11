@@ -30,12 +30,12 @@ export default function Gallery() {
             <p className="text-sm font-bold uppercase tracking-widest mb-3 text-[#7c3aed]">
               Gallery
             </p>
-            <h2
+            <h1
               className="text-4xl sm:text-5xl font-black text-[#1e1b2e] leading-none"
               style={{ letterSpacing: "-0.03em" }}
             >
               Tumor Tactics<br />in Action
-            </h2>
+            </h1>
           </div>
           <p className="text-[#3d2f6b] text-sm max-w-xs leading-relaxed">
             Photos from classroom pilots and community events across the country.

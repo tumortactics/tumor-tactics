@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Impact from "@/components/Impact";
 import Awards from "@/components/Awards";
 import PressSection from "@/components/PressSection";
+import PageJourney from "@/components/PageJourney";
 
 export const metadata: Metadata = {
   title: "Impact & Recognition | Tumor Tactics",
@@ -49,8 +50,8 @@ export default function ImpactAndRecognitionPage() {
         </section>
 
         <Impact />
+        <Awards variant="static" />
         <PressSection variant="archive" />
-        <Awards />
 
         <section className="border-t border-[#b4a4f0] bg-[#ede9fe] py-20">
           <div className="mx-auto max-w-4xl px-6">
@@ -76,6 +77,7 @@ export default function ImpactAndRecognitionPage() {
             </div>
           </div>
         </section>
+        <PageJourney page="impact" />
       </main>
       <Footer />
     </>

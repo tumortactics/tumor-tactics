@@ -63,6 +63,16 @@ h1, h2, h3 {
   will-change: transform;
 }
 
+.awards-track {
+  animation-duration: 56s;
+}
+
+#awards-heading,
+#press-heading,
+#media-features-heading {
+  scroll-margin-top: 6rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -71,4 +81,8 @@ h1, h2, h3 {
   .animate-marquee {
     animation: none;
   }
+
+  .awards-carousel { overflow-x: auto; }
+  .awards-duplicate { display: none; }
+  .awards-track { transform: none; }
 }

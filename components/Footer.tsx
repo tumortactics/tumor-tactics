@@ -1,33 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const footerGroups = [
-  {
-    label: "About",
-    links: [
-      { label: "Why It Matters", href: "/the-problem" },
-      { label: "Our Story", href: "/our-story" },
-      { label: "Meet Our Team", href: "/team" },
-    ],
-  },
-  {
-    label: "The Game",
-    links: [
-      { label: "How to Play", href: "/how-to-play" },
-      { label: "Shop the Kit", href: "/shop" },
-      { label: "Free Download", href: "/game" },
-    ],
-  },
-  {
-    label: "Explore",
-    links: [
-      { label: "Impact", href: "/impact-and-recognition" },
-      { label: "Gallery", href: "/gallery" },
-      { label: "Get Involved", href: "/get-involved" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-];
+import { footerGroups } from "@/data/navigation";
 
 export default function Footer() {
   const year = new Date().getFullYear();

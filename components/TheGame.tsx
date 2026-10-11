@@ -43,8 +43,8 @@ function RulebookStack() {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-6 w-full" style={{ maxWidth: 364 }}>
-        <div className="relative w-full" style={{ minHeight: 504 }}>
+      <div className="mx-auto flex w-[calc(100%_-_2rem)] flex-col items-center gap-6 sm:w-full" style={{ maxWidth: 364 }}>
+        <div className="relative w-full">
           {/* Back card (page 2) — peeking behind */}
           <button
             onClick={(e) => openPage(1, e.currentTarget)}
@@ -310,14 +310,14 @@ export default function TheGame() {
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
             <div>
               <p className="text-white/75 text-xs font-bold uppercase tracking-widest mb-3">
-                Educational Card Game
+                Free Print-and-Play
               </p>
               <h1
                 className="text-4xl sm:text-5xl font-black text-white leading-none"
                 style={{ letterSpacing: "-0.03em" }}
               >
-                Where Biology<br />
-                <span style={{ color: "#c4b5fd" }}>Meets Strategy</span>
+                Download<br />
+                <span style={{ color: "#c4b5fd" }}>Tumor Tactics</span>
               </h1>
             </div>
             <div className="flex flex-wrap gap-2 sm:justify-end">
@@ -332,6 +332,17 @@ export default function TheGame() {
               ))}
             </div>
           </div>
+          <p className="mt-6 max-w-xl text-sm leading-relaxed text-white/85">
+            Print the cards and rulebook to play at home or in your classroom. Both files are free.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <a href="https://drive.google.com/file/d/12y6LeaMp7wqtQm1XlawTGLVCObHb1Ljm/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-xl bg-[#7c3aed] px-6 py-3 text-sm font-bold text-white hover:bg-[#5b21b6]">
+              Download Cards
+            </a>
+            <a href="https://drive.google.com/file/d/1U7TyNuv27NjsQPOuZaB23LRqlKlTb3HB/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-xl border border-[#c4b5fd] px-6 py-3 text-sm font-bold text-white hover:bg-white/10">
+              Download Rulebook
+            </a>
+          </div>
         </div>
       </section>
 
@@ -339,10 +350,10 @@ export default function TheGame() {
       <div style={{ background: "#2a1a5e", borderBottom: "1px solid #4a2fa0" }}>
         <div className="max-w-6xl mx-auto px-6 py-5">
           <p className="text-white/90 text-sm text-center leading-relaxed">
-            <span className="font-bold text-[#c4b5fd]">Buy the full kit with all materials now at <a href="/shop" className="underline">tumortactics.com/shop</a></span>
+            <span className="font-bold text-[#c4b5fd]">Physical kits are out of stock and expected to restock within a few months. <a href="/shop" className="underline">Preorder the full kit for $17.99</a>.</span>
             <br></br>For bulk orders, educator inquiries, or classroom partnership requests,
             please reach out directly at{" "}
-            <span className="font-semibold text-white">playtumortactics@gmail.com</span>{" "}
+            <a href="mailto:playtumortactics@gmail.com" className="font-semibold text-white underline">playtumortactics@gmail.com</a>{" "}
             — we&rsquo;re happy to help.
           </p>
         </div>

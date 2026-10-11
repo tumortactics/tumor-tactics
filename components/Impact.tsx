@@ -1,7 +1,7 @@
 const stats = [
   { number: "10+", label: "Schools Impacted", description: "Partner schools across the country" },
   { number: "$5k+", label: "Raised", description: "Funding kits, outreach & educator resources" },
-  { number: "100s", label: "Students Reached", description: "Young learners in hands-on cancer education" },
+  { number: "1,500+", label: "Students Reached", description: "Across workshops and presentations" },
   { number: "Growing", label: "National Outreach", description: "Expanding to new regions and communities" },
 ];
 

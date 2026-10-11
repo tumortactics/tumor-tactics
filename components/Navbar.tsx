@@ -4,60 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-
-type NavigationItem = {
-  label: string;
-  href: string;
-  description?: string;
-};
-
-const navigationGroups: { label: string; items: NavigationItem[] }[] = [
-  {
-    label: "About",
-    items: [
-      {
-        label: "Why It Matters",
-        href: "/the-problem",
-        description: "The education gap Tumor Tactics is built to close.",
-      },
-      {
-        label: "Our Story",
-        href: "/our-story",
-        description: "The personal experience that started the game.",
-      },
-      {
-        label: "Meet Our Team",
-        href: "/team",
-        description: "The students leading the mission forward.",
-      },
-    ],
-  },
-  {
-    label: "The Game",
-    items: [
-      {
-        label: "How to Play",
-        href: "/how-to-play",
-        description: "Learn the objective, setup, and card types.",
-      },
-      {
-        label: "Shop the Kit",
-        href: "/shop",
-        description: "Get the full classroom-ready card game.",
-      },
-      {
-        label: "Free Download",
-        href: "/game",
-        description: "Print the cards and rulebook at home.",
-      },
-    ],
-  },
-];
-
-const directItems: NavigationItem[] = [
-  { label: "Impact", href: "/impact-and-recognition" },
-  { label: "Get Involved", href: "/get-involved" },
-];
+import { navigationGroups, directItems, type NavigationItem } from "@/data/navigation";
 
 function Chevron() {
   return (
@@ -77,6 +24,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const groupRefs = useRef<Record<string, HTMLDetailsElement | null>>({});
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -91,14 +39,32 @@ export default function Navbar() {
     };
 
     document.addEventListener("pointerdown", handlePointerDown);
-    return () => document.removeEventListener("pointerdown", handlePointerDown);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        groupRefs.current[openGroup]?.querySelector("summary")?.focus();
+        setOpenGroup(null);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [openGroup]);
 
   const isActive = (href: string) => pathname === href;
   const groupIsActive = (items: NavigationItem[]) => items.some((item) => isActive(item.href));
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-[#b4a4f0] bg-[#fdfcff]/95 shadow-sm shadow-purple-100/50 backdrop-blur-xl">
+    <nav
+      className="sticky top-0 z-50 border-b border-[#b4a4f0] bg-[#fdfcff]/95 shadow-sm shadow-purple-100/50 backdrop-blur-xl"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && isOpen) {
+          setIsOpen(false);
+          menuButtonRef.current?.focus();
+        }
+      }}
+    >
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link
           href="/"
@@ -193,11 +159,12 @@ export default function Navbar() {
               isActive("/shop") ? "bg-[#1e1b2e]" : "bg-[#7c3aed] hover:bg-[#5b21b6]"
             }`}
           >
-            Get the Game
+            Preorder the Kit
           </Link>
         </div>
 
         <button
+          ref={menuButtonRef}
           type="button"
           className="flex h-11 w-11 items-center justify-center text-[#3d2f6b] transition-colors hover:bg-[#ede9fe] hover:text-[#1e1b2e] lg:hidden"
           onClick={() => setIsOpen((open) => !open)}
@@ -265,7 +232,7 @@ export default function Navbar() {
               className="bg-[#7c3aed] px-5 py-3.5 text-center text-sm font-bold text-white"
               onClick={() => setIsOpen(false)}
             >
-              Get the Game
+              Preorder the Kit
             </Link>
           </div>
         </div>

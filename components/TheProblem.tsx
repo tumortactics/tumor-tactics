@@ -169,10 +169,10 @@ export default function TheProblem() {
               Get Involved
             </Link>
             <Link
-              href="/game"
+              href="/how-to-play"
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-[#7c3aed] border border-[#c4b5fd] bg-white hover:bg-[#ede9fe] transition-[background-color,transform] active:translate-y-px"
             >
-              See the Game
+              Learn How to Play
             </Link>
           </div>
         </div>

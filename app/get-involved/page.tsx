@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import GetInvolved from "@/components/GetInvolved";
 import Footer from "@/components/Footer";
+import PageJourney from "@/components/PageJourney";
 
 export const metadata: Metadata = {
   title: "Get Involved | Tumor Tactics",
@@ -15,6 +16,7 @@ export default function GetInvolvedPage() {
       <Navbar />
       <main>
         <GetInvolved />
+        <PageJourney page="involved" />
       </main>
       <Footer />
     </>

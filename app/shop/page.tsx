@@ -4,11 +4,12 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import ProductGallery from "@/components/ProductGallery";
+import BuyButton from "@/components/BuyButton";
 
 export const metadata: Metadata = {
-  title: "Shop | Tumor Tactics",
+  title: "Preorder the Kit | Tumor Tactics",
   description:
-    "Get your Tumor Tactics kit — $17.99 per deck. Free shipping on 2+ orders. 10% of proceeds supports ACS pediatric research.",
+    "Preorder your Tumor Tactics kit for $17.99. Currently out of stock; restocking is expected within a few months. Kits ship after restock. Shipping charges may apply.",
 };
 
 export default function ShopPage() {
@@ -27,10 +28,10 @@ export default function ShopPage() {
               className="text-5xl sm:text-6xl font-black text-white mb-6 leading-tight"
               style={{ letterSpacing: "-0.03em" }}
             >
-              Get Your Tumor Tactics Kit
+              Preorder Your Tumor Tactics Kit
             </h1>
             <p className="text-lg text-white/85 leading-relaxed">
-              Each kit includes a full card deck designed for classroom play, and a printed two-sided rulebook. $17.99 per deck.
+              Out of stock, with restocking expected within a few months. Each $17.99 kit includes a full card deck and a printed two-sided rulebook.
             </p>
             <div className="flex items-center justify-center gap-2 mt-6">
               <span className="text-sm text-white/55 font-medium uppercase tracking-widest">A project by</span>
@@ -86,7 +87,7 @@ export default function ShopPage() {
                     "2–4 players · Ages 8+",
                     "10% of proceeds support pediatric cancer research through the American Cancer Society",
                     "All other proceeds fund free kits for Title I and underserved schools nationwide",
-                    "Free local shipping/pickup within San Diego. Shipping charges may apply elsewhere."
+                    "Free local delivery/pickup in select San Diego areas. Shipping elsewhere is invoiced separately (typically around $7.50)."
                   ].map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <span
@@ -113,84 +114,11 @@ export default function ShopPage() {
                   ))}
                 </ul>
 
-                {/* Deer Canyon promo */}
-                <div
-                  className="flex items-start gap-3 rounded-xl px-4 py-3 text-sm"
-                  style={{ background: "#ede9fe", color: "#3d2f6b" }}
-                >
-          
-                </div>
+                <BuyButton />
 
-                {/* Square embed */}
-                <div className="pt-2">
-                      <div
-                      style={{
-                        overflow: "auto",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "flex-end",
-                        alignItems: "center",
-                        width: "259px",
-                        background: "#FFFFFF",
-                        border: "1px solid rgba(0, 0, 0, 0.1)",
-                        boxShadow: "-2px 10px 5px rgba(0, 0, 0, 0)",
-                        borderRadius: "10px",
-                        fontFamily: "SQ Market, Helvetica, Arial, sans-serif",
-                      }}
-                    >
-                      <div style={{ padding: "20px" }}>
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          href="https://square.link/u/5eGF3o7o?src=embed"
-                          style={{
-                            display: "inline-block",
-                            fontSize: "18px",
-                            lineHeight: "48px",
-                            height: "48px",
-                            color: "#ffffff",
-                            minWidth: "212px",
-                            backgroundColor: "#7c3aed",
-                            textAlign: "center",
-                            boxShadow: "0 0 0 1px rgba(0,0,0,.1) inset",
-                            borderRadius: "6px",
-                            textDecoration: "none",
-                          }}
-                        >
-                          Buy now
-                        </a>
-                      </div>
-                    </div>
-
-                  <script
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                        (function() {
-                          function showCheckoutWindow(e) {
-                            e.preventDefault();
-                            var btn = document.getElementById('embedded-checkout-modal-checkout-button');
-                            var url = btn.getAttribute('data-url');
-                            var title = 'Square Payment Links';
-                            var topWindow = window.top ? window.top : window;
-                            var dualScreenLeft = topWindow.screenLeft !== undefined ? topWindow.screenLeft : topWindow.screenX;
-                            var dualScreenTop = topWindow.screenTop !== undefined ? topWindow.screenTop : topWindow.screenY;
-                            var width = topWindow.innerWidth ? topWindow.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-                            var height = topWindow.innerHeight ? topWindow.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-                            var h = height * .75;
-                            var w = 500;
-                            var systemZoom = width / topWindow.screen.availWidth;
-                            var left = (width - w) / 2 / systemZoom + dualScreenLeft;
-                            var top = (height - h) / 2 / systemZoom + dualScreenTop;
-                            var newWindow = window.open(url, title, 'scrollbars=yes, width=' + (w / systemZoom) + ', height=' + (h / systemZoom) + ', top=' + top + ', left=' + left);
-                            if (window.focus) newWindow.focus();
-                          }
-                          var btn = document.getElementById('embedded-checkout-modal-checkout-button');
-                          if (btn) btn.addEventListener('click', showCheckoutWindow);
-                        })();
-                      `,
-                    }}
-                  />
-                </div>
+                <p className="text-sm leading-relaxed text-[#3d2f6b]">
+                  Want to play while you wait? <Link href="/game" className="font-semibold text-[#7c3aed] underline underline-offset-4">Download the free print-and-play game</Link> or <Link href="/how-to-play" className="font-semibold text-[#7c3aed] underline underline-offset-4">learn how to play</Link>.
+                </p>
 
                 <p className="text-xs" style={{ color: "#6b5f8e" }}>
                   Title I educator?{" "}

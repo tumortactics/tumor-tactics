@@ -4,7 +4,7 @@ const options = [
     title: "Partner With Us",
     description:
       "Schools, hospitals, nonprofits, and research institutions can work with us to bring cancer education to more classrooms.",
-    cta: "Become a Partner",
+    cta: "Email About a Partnership",
     href: "mailto:playtumortactics@gmail.com?subject=Partnership%20Inquiry",
     accent: "#7c3aed",
     accentText: "#fff",
@@ -15,7 +15,7 @@ const options = [
     title: "Bring the Game to Your School",
     description:
       "Educators can request a classroom kit with game materials, educator guides, and lesson plans aligned with science standards for ages 8+.",
-    cta: "Request a Kit",
+    cta: "Email to Request a Kit",
     href: "mailto:playtumortactics@gmail.com?subject=Game%20Kit%20Request",
     accent: "#1e1b2e",
     accentText: "#fff",
@@ -26,7 +26,7 @@ const options = [
     title: "Join the Tumor Tactics Team",
     description:
       "Students can help run events, demo the game at schools and fairs, and share cancer education in their communities. No experience is required.",
-    cta: "Join the Team",
+    cta: "Email to Join the Team",
     href: "mailto:playtumortactics@gmail.com",
     accent: "#a855f7",
     accentText: "#fff",
@@ -66,7 +66,7 @@ export default function GetInvolved() {
                 className="w-8 h-1 rounded-full mb-6 transition-[width] duration-300 group-hover:w-12"
                 style={{ background: opt.accent }}
               />
-              <h3 className="text-base font-bold text-[#1e1b2e] mb-3">{opt.title}</h3>
+              <h2 className="text-base font-bold text-[#1e1b2e] mb-3">{opt.title}</h2>
               <p className={`text-sm text-[#3d2f6b] leading-relaxed flex-1 ${opt.note ? "mb-4" : "mb-7"}`}>{opt.description}</p>
               {opt.note && (
                 <p className="text-xs text-[#6b5f8e] italic mb-4">{opt.note}</p>

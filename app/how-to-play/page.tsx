@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HowToPlayVideo from "@/components/HowToPlayVideo";
 
 export const metadata: Metadata = {
   title: "How to Play | Tumor Tactics",
@@ -26,7 +27,7 @@ const cardTypes = [
     label: "Cancer Cards",
     color: "#ef4444",
     borderColor: "#fca5a5",
-    cardImg: "/assets/CARDS/1.png",
+    cardImg: "/assets/CARDS/22.png",
     body: "Cancer cards represent your patients' tumors: Lung, Colon, and Skin. Each tumor starts at Stage 1 with 6 HP. If you draw a Cancer card for a tumor you still have active, that tumor advances one stage and gains 1 HP. If you draw a Cancer card for a tumor you have already cured, that cancer comes back as a new Stage 1 tumor with 4 HP. Higher stages are harder to treat.",
   },
   {
@@ -83,6 +84,8 @@ export default function HowToPlayPage() {
             </div>
           </div>
         </section>
+
+        <HowToPlayVideo />
 
         {/* Section 1 — Objective */}
         <section className="py-20 bg-white border-b border-[#b4a4f0]">
@@ -193,9 +196,10 @@ export default function HowToPlayPage() {
                       src={ct.cardImg}
                       alt={`${ct.label} example`}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       sizes="100px"
-                      loading="lazy"
+                      unoptimized={ct.label === "Cancer Cards"}
+                      loading={ct.label === "Cancer Cards" ? "eager" : "lazy"}
                     />
                   </div>
                   <div>
@@ -247,7 +251,7 @@ export default function HowToPlayPage() {
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-sm text-white transition-[opacity,transform] hover:opacity-90 active:translate-y-px shadow-md"
               style={{ background: "#7c3aed" }}
             >
-              Get the full kit — $17.99
+              Preorder the full kit — $17.99
             </Link>
           </div>
         </section>

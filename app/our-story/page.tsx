@@ -113,13 +113,13 @@ export default function OurStoryPage() {
               href="/team"
               className="inline-flex items-center gap-2 rounded-xl bg-[#1e1b2e] px-7 py-3 text-sm font-bold text-white shadow-md transition-[opacity,transform] hover:opacity-90 active:translate-y-px"
             >
-              Meet the Team
+              Meet Our Team
             </Link>
             <Link
               href="/how-to-play"
               className="inline-flex items-center gap-2 rounded-xl border border-[#c4b5fd] bg-white px-7 py-3 text-sm font-bold text-[#7c3aed] transition-[background-color,transform] hover:bg-[#ede9fe] active:translate-y-px"
             >
-              See the Game
+              Learn How to Play
             </Link>
           </div>
           <p className="mt-8 px-6 text-center text-xs italic text-[#9ca3af]">

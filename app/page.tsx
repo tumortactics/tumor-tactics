@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import GameSnapshot from "@/components/GameSnapshot";
+import HowToPlayVideo from "@/components/HowToPlayVideo";
 import Story from "@/components/Story";
 import WorkshopGallery from "@/components/WorkshopGallery";
 import PressSection from "@/components/PressSection";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Marquee />
         <GameSnapshot />
+        <HowToPlayVideo />
         <PressSection />
         <Story />
         <WorkshopGallery />
