@@ -4,6 +4,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/HOPE",
+        destination: "https://forms.gle/fesP6njMgL3Js7nA9",
+        permanent: false,
+      },
+      {
         source: "/about",
         destination: "/our-story",
         permanent: true,
